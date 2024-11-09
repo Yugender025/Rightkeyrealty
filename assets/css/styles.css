@@ -1215,3 +1215,28 @@ rgb(0, 0, 0) 100%
 .col-6 img{
     border-radius:12px ;
 }
+.channelptnr_mainContainer{
+    padding:1em 3em 1em 2em;
+    border-radius: 1em;
+    border: 0.025em solid #f39c12;
+}
+.channelptnr_provide {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Adjust space between items */
+}
+.whychoose_container {
+ display: grid;
+ 
+  gap: 2rem;
+}
+.channel_whyChoose{
+    padding: 40px 60px 40px 60px;
+}
+.channelptnr_advimg{
+    background-color: var(--colors-white-50);
+    width: 100%;
+}
+.channelptnr_advimg .channelptnr_imgadvContainer{
+    text-align: center;
+}
