@@ -231,8 +231,16 @@ nav .hero_section{
     line-height: var(--body-line-height);
     letter-spacing: var(--body-letter-spacing);
 }
+.menu_links a{
+    color: inherit;
+    text-decoration: none;
+}
+.menu_links a:hover{
+    color: var(--colors-bahama-blue-600);
+    transition: 0.3s ease-in;
+}
 .section_banner{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/back.webp');
+    /* background-image:linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/back.webp'); */
     background-position: center center;
 			background-repeat:  no-repeat;
 			background-size:  cover;
@@ -694,8 +702,8 @@ nav .hero_section{
   
   .news .image {
     position: absolute;
-    width: 427px;
-    height: 327px;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     object-fit: cover;

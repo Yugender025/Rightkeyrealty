@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rightkeyrealty</title>
+    <link rel="icon" href="./assets/images/favicon.ico" sizes="any">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.scss">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
@@ -20,10 +21,10 @@
              </div>
              <div class="menu_items">
                 <ul class="menu_links">
-                    <li>Propeties</li>
-                    <li>Our Services</li>
-                    <li>Channel Partner</li>
-                    <li>About us</li>
+                    <li><a href="#">Propeties</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="channelpartner.html">Channel Partner</a></li>
+                    <li><a href="About.html">About us</a></li>
                 </ul>
              </div>
              <div class="contact-us">
@@ -673,63 +674,51 @@
       const newsContainer = document.querySelector('.news_carouselContainer');
       const newsItems = document.querySelectorAll('.news');
 
-// Number of items to show at a time
+
 const itemsToShow = 3;
-let currentIndex = 0; // Tracks the first item of the current set
+let currentIndex = 0; 
 const totalItems = newsItems.length;
 
-// Function to update the carousel display
+
 function updateCarousel() {
     newsItems.forEach((item, index) => {
         if (index >= currentIndex && index < currentIndex + itemsToShow) {
-            item.style.display = 'block'; // Show items within the current set
+            item.style.display = 'block'; 
         } else {
-            item.style.display = 'none'; // Hide other items
+            item.style.display = 'none'; 
         }
     });
 }
 
-// Event listeners for next and previous buttons
+
 nextBtn.addEventListener('click', () => {
     if (currentIndex + itemsToShow < totalItems) {
-        currentIndex += itemsToShow; // Move to the next set of items
+        currentIndex += itemsToShow; 
     } else {
-        currentIndex = 0; // Go back to the first set when reaching the end
+        currentIndex = 0; 
     }
     updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
     if (currentIndex - itemsToShow >= 0) {
-        currentIndex -= itemsToShow; // Move to the previous set of items
+        currentIndex -= itemsToShow; 
     } else {
-        currentIndex = totalItems - itemsToShow; // Go to the last set when reaching the beginning
+        currentIndex = totalItems - itemsToShow; 
     }
     updateCarousel();
 });
 newsContainer.transform = `translateX(${offset}%)`;
-// Initialize the carousel to show the first set of items
+
 updateCarousel();
 
     </script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.section_banner').style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('./assets/images/back.webp')";
+});
 
-
-    <!-- <script>
-        document.addEventListener("contextmenu", function(event) {
-          event.preventDefault();
-        });
-      // Disable F12 and Ctrl+Shift+I
-      document.addEventListener("keydown", function(event) {
-        // Disable F12
-        if (event.key === "F12") ōōōl̥l̥l̥ṇṇṇṭṭṭ
-          event.preventDefault();
-        }
-        // Disable Ctrl+Shift+I (Inspect)
-        if (event.ctrlKey && event.shiftKey && event.key === "I") {
-          event.preventDefault();
-        }
-      });
-    </script> -->
-    
+ </script>
+   
 </body>
 </html>
