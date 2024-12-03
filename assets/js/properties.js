@@ -19,12 +19,15 @@ const propertiesList = [
   {
     _id: 2,
     title: "Mayoora",
-    address: "SR nagar",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
     category: "commercial",
     projectHighlights: {
-      amenities: "",
-      squarefeet: "",
-      highlights: "",
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
     },
     propertyLink: "",
     img1: "",
@@ -49,8 +52,11 @@ const propertiesList = [
 ];
 
 function createPropertylist(products) {
+  // Create a unique identifier for this specific property card
+  const uniqueId = `property-${products._id}`;
+
   return `
-     <div class="property_cardContainer">
+     <div class="property_cardContainer" data-property-id="${products._id}">
                 <div class="property_imgContainer">
                     <div class="main_ImgContainer">
                         <img class="property-card__main-image" width="250" height="250" src="${
@@ -86,23 +92,55 @@ function createPropertylist(products) {
                          </p>
                       </div> 
                       <div class="property-card__highlights">
-                         <div class="property-card__highlight-tabs">
-                             <div class="property-card__highlight-tab-icon"><i class="fa-light fa-building"></i></div>
-                             <div class="property-card__highlight-tab-icon"><i class="fa-light fa-building"></i></div>
-                             <div class="property-card__highlight-tab-active">
-                                 <div class="property-card__highlight-tab-active-text"><i class="fa-light fa-building"></i></div>
-                             </div>
-                         </div>
-                         
-                         <div class="property-card__description-section">
-                             <div class="property-card__description-title">Square feet</div>
-                             <p class="property-card__description-text">
-                                 ${
-                                   products.projectHighlights.squarefeet ||
-                                   "N/A"
-                                 }
-                             </p>
-                         </div>
+                          <div class="property-card__highlight-tabs">
+                              <div 
+                                  class="property-card__highlight-tab-icon" 
+                                  data-property-id="${products._id}"
+                                  data-title="Amenities" 
+                                  data-description="${
+                                    products.projectHighlights.amenities ||
+                                    "N/A"
+                                  }"
+                                  onclick="showHighlight(this)">
+                                  <i class="fa-light fa-building"></i>
+                              </div>
+                              <div 
+                                  class="property-card__highlight-tab-icon" 
+                                  data-property-id="${products._id}"
+                                  data-title="Square Feet" 
+                                  data-description="${
+                                    products.projectHighlights.squarefeet ||
+                                    "N/A"
+                                  }"
+                                  onclick="showHighlight(this)">
+                                  <i class="fa-light fa-building"></i>
+                              </div>
+                              <div 
+                                  class="property-card__highlight-tab-icon" 
+                                  data-property-id="${products._id}"
+                                  data-title="Highlights" 
+                                  data-description="${
+                                    products.projectHighlights.highlights ||
+                                    "N/A"
+                                  }"
+                                  onclick="showHighlight(this)">
+                                  <i class="fa-light fa-building"></i>
+                              </div>
+                          </div>
+                          
+                          <div class="property-card__description-section">
+                              <div class="property-card__description-title" id="description-title-${
+                                products._id
+                              }">Square Feet</div>
+                              <p class="property-card__description-text" id="description-text-${
+                                products._id
+                              }">
+                                  ${
+                                    products.projectHighlights.squarefeet ||
+                                    "N/A"
+                                  }
+                              </p>
+                          </div>
                       </div>
                       <div class="property-card__cta-button">
                          <div class="property-card__cta-text"><a href="${
@@ -114,6 +152,52 @@ function createPropertylist(products) {
             </div>
   `;
 }
+
+function showHighlight(tabElement) {
+  // Get the property ID and details from data attributes
+  const propertyId = tabElement.getAttribute("data-property-id");
+  const title = tabElement.getAttribute("data-title");
+  const description = tabElement.getAttribute("data-description");
+
+  // Find the specific description elements for this property
+  const descriptionTitleElement = document.getElementById(
+    `description-title-${propertyId}`
+  );
+  const descriptionTextElement = document.getElementById(
+    `description-text-${propertyId}`
+  );
+
+  // Update the content dynamically
+  if (descriptionTitleElement && descriptionTextElement) {
+    descriptionTitleElement.innerHTML = `<h4>${title}</h4>`;
+    descriptionTextElement.innerText = description;
+  }
+
+  // Remove active class from all tabs within this property card
+  const propertyCard = tabElement.closest(".property_cardContainer");
+  if (propertyCard) {
+    const tabs = propertyCard.querySelectorAll(
+      ".property-card__highlight-tab-icon"
+    );
+    tabs.forEach((tab) =>
+      tab.classList.remove("property-card__highlight-tab-active")
+    );
+
+    tabElement.classList.add("property-card__highlight-tab-active");
+  }
+}
+
+window.onload = function () {
+  const propertyCards = document.querySelectorAll(".property_cardContainer");
+  propertyCards.forEach((card) => {
+    const defaultTab = card.querySelector(
+      ".property-card__highlight-tab-icon:nth-child(1)"
+    );
+    if (defaultTab) {
+      defaultTab.click(); // Simulate a click to initialize
+    }
+  });
+};
 const propertiesListContainer = document.querySelector(".properties_list");
 
 propertiesList.forEach((property) => {
