@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rightkeyrealty</title>
+    <meta name="title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta name="description" content="Explore a wide range of properties in Hyderabad. Find your dream home with expert assistance, detailed property listings, and verified information.">
+    <meta property="og:title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta property="og:description" content="Discover the best homes in Hyderabad. Browse verified listings, get expert guidance, and make your property search seamless.">
+    <title>Real Estate in Hyderabad | Find Homes with Us</title>
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.scss">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
@@ -145,16 +150,64 @@
         </div>
     </div>
     <div class="joining_program">
-      <div class="program_headerContainer">
-            <div class="programheader">
-                <h2>Join the Right Key Realty Channel Partner Program Today</h2>
-                <p>Enhance your real estate expertise, elevate your business, and deliver exceptional results for your clients.</p>
+       <div class="user_interactive">
+            <div class="program_headerContainer">
+                
+                    <div class="programheader">
+                        <h2>Join the Right Key Realty Channel Partner Program Today</h2>
+                        <p class="channel-descrp">Enhance your real estate expertise, elevate your business, and deliver exceptional results for your clients.</p>
+                    </div>
+                    <div class="circular_hovering"></div>
+                    <div class="sm-btn">
+                        <div id="how-link" class="get-started">Join the program</div>
+                    </div>
             </div>
-            <div class="sm-btn">
-                <div id="how-link" class="get-started">Join the program</div>
+            <div class="program_joiningCntct">
+                <div class="container">
+                    <h1>Representative Information</h1>
+                    <form id="representative-form" action="submit.php" method="post" enctype="multipart/form-data">
+                    <div class="left_group">   
+                            <div class="form-group">
+                                <label for="representative-name">Representative Name</label>
+                                <input type="text" id="representative-name" name="representative-name" placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" name="company-name" placeholder="Enter Name" required>
+                            </div>
+                    </div>
+                    <div class="left_group">   
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile-number">Mobile Number</label>
+                                <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter Number" required>
+                            </div>
+                    </div>
+                    <div class="left_group">    
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea id="address" name="address" placeholder="Type your message here" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="aadhar-pancard">Upload Aadhar and Pancard</label>
+                                <div class="file-input">
+                                <input type="file" id="aadhar-pancard" name="aadhar-pancard[]" multiple required>
+                                <span class="file-name">No file chosen</span>
+                                <button type="button" class="btn-add-file">Add Files</button>
+                                </div>
+                            </div>
+                    </div>             
+                    <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
             </div>
-      </div>
-    </div>    
+        </div> 
+    </div>
+      
+   
     <footer>
         <div class="footer-section">
              <div class="footer_mainContainer">
@@ -210,5 +263,7 @@
            </p>
         </div>
      </footer>
+     <script src="services.html"></script>
+     
 </body>
 </html>

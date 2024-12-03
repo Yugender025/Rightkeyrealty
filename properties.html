@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta name="description" content="Explore a wide range of properties in Hyderabad. Find your dream home with expert assistance, detailed property listings, and verified information.">
+    <meta property="og:title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta property="og:description" content="Discover the best homes in Hyderabad. Browse verified listings, get expert guidance, and make your property search seamless.">
+    <title>Real Estate in Hyderabad | Find Homes with Us</title>
+    
+    <link rel="preconnect" href="" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet"  href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responive.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>    
+<body>
+    <header>
+        <nav>
+            <div class="hero_section">
+                <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu_items">
+                <ul class="menu_links">
+                    <li><a href="#">Propeties</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="channelpartner.html">Channel Partner</a></li>
+                    <li><a href="About.html">About us</a></li>
+                </ul>
+            </div>
+            <div class="contact-us">
+                <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+            </div>
+        </nav>
+    </header>
+    <div class="banner_section2">
+        <div class="inner_containerprop">
+            <div class="hero-content">
+                <div class="filter-options">
+                  <button class="filter-btn active">All</button>
+                  <button class="filter-btn">Residential</button>
+                  <button class="filter-btn">Commercial</button>
+                  <button class="filter-btn">Open plots</button>
+                </div>
+                <div class="search-bar">
+                  <input type="text" placeholder="Search your Dream" />
+                  <div class="sort-filter">
+                    <button class="sort-btn">Sort <span class="sort-icon"><i class="fa-light fa-arrow-up-arrow-down"></i></span></button>
+                    <button class="filter-btn">Filter <span class="filter-icon"><i class="fa-light fa-filter-list"></i></span></button>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="properties_list">
+ 
+    </div>
+    <script>
+        // Filter button functionality
+const filterBtns = document.querySelectorAll('.filter-btn');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Add your filtering logic here
+  });
+});
+
+// Sort functionality
+const sortBtn = document.querySelector('.sort-btn');
+sortBtn.addEventListener('click', () => {
+  const sortIcon = sortBtn.querySelector('.sort-icon');
+  if (sortIcon.textContent === '▲') {
+    sortIcon.textContent = '▼';
+  } else {
+    sortIcon.textContent = '▲';
+  }
+  // Add your sorting logic here
+});
+
+// Filter functionality
+const filterBtn = document.querySelector('.filter-btn:nth-child(2)');
+filterBtn.addEventListener('click', () => {
+  // Add your filtering logic here
+});
+    </script>
+    <script src="assets/js/properties.js"></script>
+</body>
+</html>
