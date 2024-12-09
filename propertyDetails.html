@@ -101,6 +101,10 @@
             <div class="projectheader_Container">
                 <div class="main_headerContainer">
                     <h2>GR MAYOORA Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</h2>
+                     <div class="property-card__share-section">
+                            <div class="property-card__share-text">Share</div>
+                            <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
+                     </div>
                 </div>
                 <div class="caption_headerContainer">
                     <h3 class="highlight">Ready to move in 2&3 BHK Gated Community Apartments </h3>
@@ -109,7 +113,7 @@
             </div>
             <hr style="margin-top: 0.8rem;">
             <div class="projectflex_details">
-                <div onclick="updateContent('Overview')" class="Overview">
+                <div onclick="updateContent('Overview')" class="Overview active">
                     Overview
                 </div>
                 <div onclick="updateContent('Amenities')" class="amientiesContainer">
@@ -164,10 +168,11 @@
               <div class="nearby_properties">
                     <div class="properties_headerContainer">
                         <h2>Near By Properties</h2>
+                        <div class="properties_list">
+                            <!-- <here>Javascript code</here> -->
+                        </div>
                     </div>
-                    <div class="properties_list">
-                        <!-- <here>Javascript code</here> -->
-                    </div>
+                    
                 </div>
         </div>
         
@@ -374,20 +379,38 @@ function updateContent(section) {
     contentDetails.innerHTML = contentMap[section] || '<p>Content not available.</p>';
 
     // Highlight the active section
-    document.querySelectorAll('.projectflex_details div').forEach(div => {
-        div.classList.remove('active');
+    document.querySelectorAll('.projectflex_details > div').forEach(div => {
+        div.classList.remove('active'); // Remove the 'active' class
     });
-    document.querySelector(`.projectflex_details .${section.toLowerCase()}`)?.classList.add('active');
-}
 
-// Set the first section as active on window load
-window.onload = function () {
+    // Dynamically find the corresponding div by matching its class name
+    const sectionClassMap = {
+        Overview: 'Overview',
+        Amenities: 'amientiesContainer',
+        Location: 'Locationhighlights',
+        About: 'aboutprojectContainer',
+    };
+
+    const targetClass = sectionClassMap[section]; // Get the mapped class name
+    const activeDiv = document.querySelector(`.projectflex_details > .${targetClass}`);
+
+    if (activeDiv) {
+        activeDiv.classList.add('active'); // Add the 'active' class
+    }
+
+    // Find the corresponding div to highlight based on the section name
+    window.onload = function () {
     updateContent('Overview');
 };
+}
+
+
+
 
 
 </script>
 <script src="assets/js/properties.js"></script>
+
 </body>
 </html>    
 

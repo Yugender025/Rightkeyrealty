@@ -82,7 +82,7 @@ function createPropertylist(products) {
                         <h3>${products.title}</h3>
                          <div class="property-card__share-section">
                              <div class="property-card__share-text">Share</div>
-                             <div class="property-card__share-icon"><i class="fa-light fa-share-nodes"></i></div>
+                             <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
                          </div>
                       </div>
                       <div class="property-card__location-section">
@@ -203,4 +203,24 @@ const propertiesListContainer = document.querySelector(".properties_list");
 propertiesList.forEach((property) => {
   const propertyCard = createPropertylist(property);
   propertiesListContainer.innerHTML += propertyCard;
+});
+//share-button
+
+document.getElementById("share-button").addEventListener("click", async () => {
+  const shareData = {
+    title: "Beautiful Villa",
+    text: "Check out this amazing property!",
+    url: window.location.href, // Adjust to your property's URL
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+      alert("Property shared successfully!");
+    } else {
+      alert("Share feature is not supported in this browser.");
+    }
+  } catch (error) {
+    console.error("Error sharing:", error);
+  }
 });

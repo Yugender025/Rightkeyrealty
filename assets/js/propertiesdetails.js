@@ -94,6 +94,10 @@ function creatPropertiesdetails(details) {
             <div class="projectheader_Container">
                 <div class="main_headerContainer">
                     <h2>GR MAYOORA Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</h2>
+                     <div class="property-card__share-section">
+                            <div class="property-card__share-text">Share</div>
+                            <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
+                     </div>
                 </div>
                 <div class="caption_headerContainer">
                     <h3 class="highlight">Ready to move in 2&3 BHK Gated Community Apartments </h3>
