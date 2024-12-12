@@ -1250,7 +1250,15 @@ rgb(0, 0, 0) 100%
     gap: 1.5rem;
 }
 .channel_imgContainer{
+    width: 550px;
+}
+.channel_imgContainer img{
     width: 100%;
+  
+    object-fit: fill;
+}
+.left_group.flex-col {
+    flex-direction: column;
 }
 .img_containerHeader {
     display: flex;
@@ -1369,6 +1377,7 @@ rgb(0, 0, 0) 100%
   
   .program_joiningCntct .form-group {
     margin-bottom: 1.5rem;
+    width: 100%;
   }
   
   .program_joiningCntct label {
@@ -1395,7 +1404,13 @@ rgb(0, 0, 0) 100%
     display: flex;
     align-items: center;
   }
-  
+  form#representative-form {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
   .program_joiningCntct .file-name {
     flex-grow: 1;
     margin-right: 1rem;
@@ -1408,6 +1423,7 @@ rgb(0, 0, 0) 100%
     align-items: flex-start;
     justify-content: center;
     gap:2rem;
+    width: 100%;
   }
   .program_joiningCntct .btn-add-file,
   .btn-submit {
