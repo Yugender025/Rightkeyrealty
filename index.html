@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
     <link rel="stylesheet" href="assets/css/responive.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
+    
 </head>
 <body>
     <header>
@@ -102,7 +105,8 @@
                 </div>
             </div>
         </div>
-    </div>
+  </div>
+  <div class="who_companyMaincontainer">
     <div class="who_Company">
         <div class="main_container">
             
@@ -119,11 +123,16 @@
                     <div id="how-link" class="get-started">Know more</div>
                     <i class="fa-regular fa-arrow-right"></i>
                 </div>
-                <div class="box"></div>
-                <div class="box"></div>
+     
         </div>
-        
+        <div class="boxes_aboutsection">
+          <div class="box"></div>
+          <div style="   position: absolute;
+          left: -48px;
+          top: 50px;" class="box"></div>
+        </div>
     </div>
+  </div>  
   <!-----Features projects------------------>  
   <div class="feature_projectsMaincontainer">
     <div class="feature_projectsInnercontainer">
@@ -131,72 +140,41 @@
         <h2>Feature Projects</h2>
       </div>
       <div class="feature_projectsSlide">
-        <!-- <img class="project_container" src="" id="p1-d12" alt="property"> -->
+        <img style="width: 100%;" class="project_container" src="https://rightkeyrealty.in/images/mayoora-1.jpg" id="p1-d12" alt="property">
          <div class="feature_projectPropertytype">
                 For sale
          </div> 
          <div class="property_carouselContainer">
              <div class="property_infoContainer">
-                  <div class="pro_header"><h3>GR MAYOORA</h3></div>
-                  <p>Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</p>
-                  <div class="sm-btn">
-                    <div id="how-link" class="get-started">View property</div>
-                    <i class="fa-regular fa-arrow-right"></i>
-                 </div>
+                <div class="pro_header">
+                  <h3>GR MAYOORA</h3>
+                </div>
+                <p style="font-size: 14px;">Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</p>
+                <div class="sm-btn">
+                  <div id="how-link" class="get-started">View property</div>
+                  <i class="fa-regular fa-arrow-right"></i>
+                </div>
              </div>
+             <!--carousel type-->
              <div class="carousel_container">
                 <div class="properties">
-                  <img src="" alt="">
+                  <img src="assets/images/kapil-1 (1).png" alt="mayoora">
                 </div>
                 <div class="properties">
-                  <img src="" alt="">
+                  <img src="assets/images/mayoora-8.jpg" alt="sashimadhavi">
                 </div>
                 <div class="properties">
-                  <img src="" alt="">
+                  <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil business">
                 </div>
                 <div class="properties">
-                  <img src="" alt="">
+                  <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil towers">
                 </div>
              </div>
+             <!----carousel end-->
          </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <!-----TESTIMONALS---------->  
   <div class="testimonal_container">
@@ -403,7 +381,7 @@
         <p>As one of the top leaders in the Hyderabad real estate market, Right Key Realty has persistently climbed to the upper echelon of real estate brokerage.</p>
       </div>
       <div class="news_container">
-        <div class="prev_btn">
+        <div class="prev_btns">
           <svg xmlns="http://www.w3.org/2000/svg" width="41" height="328" viewBox="0 0 41 328" fill="none">
             <path d="M-0.300781 0.210938H21.5216L40.6287 160.948L21.5216 327.211H-0.300781V0.210938Z" fill="#E7E7E7"/>
             <path d="M38.1641 159.969C38.1641 166.438 34.7188 172.344 29.1641 175.578C23.5391 178.812 16.7188 178.812 11.1641 175.578C5.53906 172.344 2.16406 166.438 2.16406 159.969C2.16406 153.57 5.53906 147.664 11.1641 144.43C16.7188 141.195 23.5391 141.195 29.1641 144.43C34.7188 147.664 38.1641 153.57 38.1641 159.969ZM21.2188 151.461L13.9062 158.844C13.2031 159.477 13.2031 160.531 13.9062 161.164L21.2188 168.477C21.8516 169.18 22.9062 169.18 23.5391 168.477C24.2422 167.844 24.2422 166.789 23.5391 166.086L17.4219 159.969L23.5391 153.852C24.2422 153.219 24.2422 152.164 23.5391 151.461C22.9062 150.828 21.8516 150.828 21.2188 151.461Z" fill="black"/>
@@ -592,7 +570,7 @@
           </div>
         </div>
         
-        <div class="next_btn">
+        <div class="next_btns">
           <svg xmlns="http://www.w3.org/2000/svg" width="41" height="328" viewBox="0 0 41 328" fill="none">
             <path d="M41.5586 0.210938H19.7362L0.629143 160.948L19.7362 327.211H41.5586V0.210938Z" fill="white"/>
             <path d="M3.09375 163.711C3.09375 170.18 6.53906 176.086 12.0938 179.32C17.7188 182.555 24.5391 182.555 30.0938 179.32C35.7188 176.086 39.0938 170.18 39.0938 163.711C39.0938 157.312 35.7188 151.406 30.0938 148.172C24.5391 144.938 17.7188 144.938 12.0938 148.172C6.53906 151.406 3.09375 157.312 3.09375 163.711ZM20.0391 155.203L27.3516 162.586C28.0547 163.219 28.0547 164.273 27.3516 164.906L20.0391 172.219C19.4062 172.922 18.3516 172.922 17.7188 172.219C17.0156 171.586 17.0156 170.531 17.7188 169.828L23.8359 163.711L17.7188 157.594C17.0156 156.961 17.0156 155.906 17.7188 155.203C18.3516 154.57 19.4062 154.57 20.0391 155.203Z" fill="black"/>
@@ -673,11 +651,20 @@
           </p>
        </div>
     </footer>
-    <script>
-      const prevBtn = document.querySelector('.prev_btn');
-      const nextBtn = document.querySelector('.next_btn');
-      const newsContainer = document.querySelector('.news_carouselContainer');
-      const newsItems = document.querySelectorAll('.news');
+   
+      
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector('.section_banner').style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('./assets/images/back.webp')";
+});
+
+ </script>
+
+<script>
+  const prevBtn = document.querySelector('.prev_btns');
+  const nextBtn = document.querySelector('.next_btns');
+  const newsContainer = document.querySelector('.news_carouselContainer');
+  const newsItems = document.querySelectorAll('.news');
 
 
 const itemsToShow = 3;
@@ -686,44 +673,44 @@ const totalItems = newsItems.length;
 
 
 function updateCarousel() {
-    newsItems.forEach((item, index) => {
-        if (index >= currentIndex && index < currentIndex + itemsToShow) {
-            item.style.display = 'block'; 
-        } else {
-            item.style.display = 'none'; 
-        }
-    });
+newsItems.forEach((item, index) => {
+    if (index >= currentIndex && index < currentIndex + itemsToShow) {
+        item.style.display = 'block'; 
+    } else {
+        item.style.display = 'none'; 
+    }
+});
 }
 
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex + itemsToShow < totalItems) {
-        currentIndex += itemsToShow; 
-    } else {
-        currentIndex = 0; 
-    }
-    updateCarousel();
+if (currentIndex + itemsToShow < totalItems) {
+    currentIndex += itemsToShow; 
+} else {
+    currentIndex = 0; 
+}
+updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex - itemsToShow >= 0) {
-        currentIndex -= itemsToShow; 
-    } else {
-        currentIndex = totalItems - itemsToShow; 
-    }
-    updateCarousel();
+if (currentIndex - itemsToShow >= 0) {
+    currentIndex -= itemsToShow; 
+} else {
+    currentIndex = totalItems - itemsToShow; 
+}
+updateCarousel();
 });
 newsContainer.transform = `translateX(${offset}%)`;
 
 updateCarousel();
 
-    </script>
- <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('.section_banner').style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('./assets/images/back.webp')";
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+document.querySelector('.section_banner').style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('./assets/images/back.webp')";
 });
 
- </script>
-   
+</script>
+
 </body>
 </html>

@@ -148,3 +148,242 @@
         font-size: 0.9rem;
     }
 }
+
+/* Large Desktops (1200px and up) */
+@media screen and (max-width: 1200px) {
+    .who_Company {
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 4rem;
+    }
+
+    .container_boxes {
+        gap: 40px;
+    }
+
+    .banner_content {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+/* Medium Desktops and Laptops (992px to 1199px) */
+@media screen and (max-width: 992px) {
+    .who_Company {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    .who_Company .box {
+        width: 220px;
+        height: 130px;
+    }
+
+    .main_header div {
+        font-size: 32px;
+    }
+
+    .company_successInfo .main_container,
+    .who_companyMaincontainer {
+        padding: 40px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media screen and (max-width: 768px) {
+    .section_aboutCompanyHistory {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 2rem;
+    }
+
+    .banner_content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .container_boxes {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .main_container .inner_container {
+        max-width: 100%;
+    }
+
+    .banner_content h1 {
+        font-size: calc(var(--h2-font-size) * 0.9);
+    }
+
+    .banner_content p {
+        font-size: 16px;
+    }
+}
+
+/* Large Phones (576px to 767px) */
+@media screen and (max-width: 576px) {
+    .company_successInfo .main_container,
+    .who_companyMaincontainer {
+        padding: 30px 20px;
+    }
+
+    .who_Company .box {
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+    }
+
+    .main_header div {
+        font-size: 28px;
+    }
+
+    .testimonals_mainClientscontainer {
+        align-items: center;
+    }
+
+    .box {
+        padding: 24px 12px;
+    }
+}
+
+/* Small Phones (575px and below) */
+@media screen and (max-width: 375px) {
+    .banner_content {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .banner_content h1 {
+        font-size: calc(var(--h2-font-size) * 0.8);
+        margin-bottom: 15px;
+    }
+
+    .banner_content p {
+        font-size: 14px;
+    }
+
+    .main_header div {
+        font-size: 24px;
+    }
+
+    .btns_prevNext {
+        gap: 0.5rem;
+    }
+
+    .btns_prevNext i {
+        font-size: 20px;
+    }
+}
+
+/* Height-based media query for very tall screens */
+@media screen and (min-height: 1000px) {
+    .section_aboutCompanyHistory {
+        height: 80vh;
+    }
+}
+
+/* For landscape orientation on mobile devices */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .section_aboutCompanyHistory {
+        height: auto;
+        min-height: 120vh;
+    }
+
+    .container_boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/*--channel partner program---*/
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .channel_pro {
+        gap: 4rem;
+    }
+    
+    .program_headerContainer {
+        padding: 40px 80px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .channelpartner_innerContainer,
+    .channel_innerContainer {
+        padding: 2rem var(--container-padding-tablet);
+    }
+
+    .channel_pro {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .channel_pro .col-6 {
+        width: 100%;
+    }
+
+    .program_headerContainer {
+        padding: 30px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .channelpartner_innerContainer,
+    .channel_innerContainer {
+        padding: 1.5rem var(--container-padding-mobile);
+    }
+
+    .channelptnr_provide {
+        grid-template-columns: 1fr;
+    }
+
+    .program_headerContainer {
+        padding: 25px 30px;
+    }
+
+    .program_joiningCntct .container .left_group {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .channel_maincontainer {
+        background-attachment: scroll; /* Better performance on mobile */
+    }
+
+    .joining_program {
+        padding: 1rem;
+    }
+
+    .program_headerContainer {
+        padding: 20px;
+    }
+
+    .program_joiningCntct .container {
+        padding: 1rem;
+    }
+}
+
+/* Form responsiveness */
+@media screen and (max-width: 600px) {
+    .program_joiningCntct input,
+    .program_joiningCntct textarea {
+        padding: 0.5rem;
+    }
+
+    .program_joiningCntct .btn-add-file,
+    .program_joiningCntct .btn-submit {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Fix for the hover effect on touch devices */
+@media (hover: none) {
+    .joining_program .program_headerContainer:hover .circular_hovering {
+        transform: none;
+        opacity: 0;
+    }
+}
+
+/*new container*/

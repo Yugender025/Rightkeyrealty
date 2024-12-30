@@ -421,13 +421,23 @@ nav .hero_section img {
     justify-content: flex-end;
     gap: 2rem;
 }
-.main_container{
+.company_successInfo .main_container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 56px;
     position: relative;
     padding: 60px;
+    
+}
+.who_companyMaincontainer .main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+    position: relative;
+    
+    
 }
 .main_container .inner_container{
     max-width: 700px;
@@ -439,11 +449,15 @@ nav .hero_section img {
     gap: 71px;
     position: relative;
 }
+.who_companyMaincontainer{
+    padding: 60px;
+    background-color: var(--colors-white-50);
+}
 .box{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 1.2rem;
     padding: 32px 16px;
     position: relative;
     background-color: #ffffff;
@@ -464,6 +478,9 @@ nav .hero_section img {
     line-height: var(--h1-line-height);
     font-style: var(--h1-font-style);
 }
+.main_header div{
+    font-size: 36px;
+}
 .caption_header{
     position: relative;
     align-self: stretch;
@@ -478,22 +495,71 @@ nav .hero_section img {
 }
 .who_Company{
     background-color: var(--colors-white-50);
-    display: flex;
+    display: grid;
+   
+    align-items: center;
+    justify-content: space-between;
+    grid-column-gap: 6rem;
+    grid-template-columns: 2.5fr 1fr;
 
 }
 .who_Company .box{
-    width: 800px;
+    width: 250px;
+    height: 150px;
+}
+.boxes_aboutsection{
+    position: relative;
 }
 /*-----------Feature projects-----------*/
-.feature_projectsSlide{
-    background-image: url("");
+.feature_projectsSlide img {
+    width: 100%;
+    border-radius: 24px;
 }
 
-
-
-
-
-
+.feature_projectsInnercontainer {
+    padding: 60px;
+    display: flex
+;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+.feature_projectPropertytype {
+    position: absolute;
+    top: 18.21%;
+    background-color: red;
+    padding: 15px 60px;
+    border-top-left-radius: 24px;
+    color: white;
+}
+.properties img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.carousel_container {
+    display: flex
+;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.properties {
+    width: 300px;
+    
+}
+.property_infoContainer {
+    background-color: white;
+    padding: 32px 16px;
+    border-radius: 12px;
+    max-width: 400px;
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 2rem; */
+}
 /*------------Testimonal----------------*/
 .testimonal_container{
     background-color: var(--colors-white-50);
@@ -695,15 +761,16 @@ nav .hero_section img {
 
 
 /*-------------news-----*/
+
 .news_mainContainer1 {
     display: flex !important;
     flex-direction: column;
     width: 100%;
     gap: 3rem;
     position: relative;
-  }
-  
-  .news_mainContainer1  .news_headerContainer {
+}
+
+.news_mainContainer1 .news_headerContainer {
     display: flex;
     flex-direction: column;
     color: var(--colors-white-50);
@@ -712,8 +779,9 @@ nav .hero_section img {
     position: relative;
     flex: 0 0 auto;
     padding-top: 2rem;
-  }
-  .news_headerContainer p {
+}
+
+.news_headerContainer p {
     width: 800px;
     text-align: center;
 }
@@ -726,9 +794,9 @@ nav .hero_section img {
     gap: 24px;
     position: relative;
     flex: 0 0 calc((100% / 3) - 40px);
-  }
-  
-  .news .img_container {
+}
+
+.news .img_container {
     position: relative;
     align-self: stretch;
     width: 100%;
@@ -736,42 +804,77 @@ nav .hero_section img {
     background-color: #ffffff;
     border-radius: 16px;
     overflow: hidden;
-  }
-  
-  .news .image {
+}
+.main_container1 {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.details_blog {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.inner_container1 {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+.news .image {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
-  }
-  
-  .news .main_container1 {
+}
+.news_mainContainer {
+    background-color: #096b99;
+}
+.news_carouselContainer {
     display: flex;
-    flex-direction: column;
-    width: 360px;
-    align-items: flex-start;
-    gap: 19px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .news .inner_container1 {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news_container {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 2rem 0 5rem 0;
     position: relative;
-    align-self: stretch;
-    width: 100%;
-    flex: 0 0 auto;
-  }
-  
-  .news .info_container1 {
-    position: relative;
-    align-self: stretch;
-    margin-top: -1.00px;
+}
+
+.prev_btn, .next_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+}
+
+.prev_btn svg, .next_btn svg {
+    transition: fill 0.3s ease;
+}
+
+.prev_btn:disabled svg path, .next_btn:disabled svg path {
+    fill: #ccc;
+}
+
+/* Additional styling for news content */
+.info_contianer1 {
     font-family: var(--xl-font-family);
     font-weight: var(--xl-font-weight);
     color: var(--colors-white-50);
@@ -779,145 +882,39 @@ nav .hero_section img {
     letter-spacing: var(--xl-letter-spacing);
     line-height: var(--xl-line-height);
     text-decoration: underline;
-    font-style: var(--xl-font-style);
-  }
-  
-  .news .the-real-estate {
-    position: relative;
-    align-self: stretch;
+}
+
+.the-real-estate {
     font-family: var(--sm-font-family);
     font-weight: var(--sm-font-weight);
     color: var(--colors-white-50);
     font-size: var(--sm-font-size);
     letter-spacing: var(--sm-letter-spacing);
     line-height: var(--sm-line-height);
-    font-style: var(--sm-font-style);
-  }
-  
-  .news .news_details {
+}
+
+.news_details {
     display: flex;
     align-items: center;
-    gap: 36px;
-    position: relative;
-    align-self: stretch;
+    justify-content: space-between;
     width: 100%;
-    flex: 0 0 auto;
-  }
-  
-  .news .container_detail {
-    display: inline-flex;
+}
+
+.container_detail {
+    display: flex;
+    gap: 8px;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .news .info_container1-2 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: "Helvetica Neue-Medium", Helvetica;
-    font-weight: 500;
+}
+
+.info_container1-2 {
     color: #ffffff;
     font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  
-  .news .details_blog {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .news .details_blog_container {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    flex: 0 0 auto;
-  }
-  
-  .news .info_container1-3 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    font-family: var(--body-font-family);
-    font-weight: var(--body-font-weight);
-    color: var(--colors-bahama-blue-50);
-    font-size: var(--body-font-size);
-    letter-spacing: var(--body-letter-spacing);
-    line-height: var(--body-line-height);
-    white-space: nowrap;
-    font-style: var(--body-font-style);
-  }
-  .inner_container1 .info_contianer1{
-    font-family: var(--xl-font-family);
-    font-weight: var(--xl-font-weight);
-    color: var(--colors-white-50);
-    
-    font-size: var(--xl-font-size);
-    letter-spacing: var(--xl-letter-spacing);
-    line-height: var(--xl-line-height);
-    text-decoration: underline;
-    font-style: var(--xl-font-style);
-  }
-  .news_carouselContainer{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap:2rem;
-    overflow: hidden;
-   
-
-    transition: transform 0.5s ease;
-  }
-  .news_container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap:1rem;
-    padding: 2rem 0 5rem 0;
-    
-  }
-  
-  .news .circle-chevron-right {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.00px;
-    transform: rotate(-90deg);
-    font-family: "Font Awesome 6 Pro-Solid", Helvetica;
-    font-weight: 400;
-    color: var(--colors-bahama-blue-50);
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 24px;
-    white-space: nowrap;
-  }
-  .news_mainContainer{
-    background-color: var(--colors-bahama-blue-800);
-  }
- .news_container .prev_btn svg:hover{
-    fill: red;
 }
-.next_btn svg {
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .prev_btn svg{
-    cursor: pointer;
-  }
-  .prev_btn svg:hover{
-    fill: #f39c12;
-  }
-  .next_btn svg:hover {
-    fill: #f39c12; /* Changes the fill color of the path on hover */
-  }
+
+.info_container1-3 a {
+    color: var(--colors-bahama-blue-50);
+    text-decoration: none;
+}
 
 
 
@@ -1144,10 +1141,13 @@ rgb(0, 0, 0) 100%
 }
 .steps .step1_img{
     width: 75px;
+    background-image: url("../images/house.gif");
+    background-position: center center;
     height: 75px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    background-image: url();
+    background-position: center center;
+    background-repeat:  no-repeat;
+    background-size:  cover;
 }
 .steps .step2_img{
     width: 75px;
@@ -1179,7 +1179,34 @@ rgb(0, 0, 0) 100%
     background-repeat:  no-repeat;
     background-size:  cover;
 }
-
+.projectmanagement_mainContainer{
+    padding: 1rem 3.75rem 1rem 3.75rem;
+    margin: auto;
+}
+.projectmanagement_headerContinaer {
+    display: flex
+;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    max-width: 800px;
+}
+.projectmanagement_mainContainer .project_manageImg{
+    width: 100%;
+}
+.project_manageImg img{
+    max-width: 100%;
+    height: auto;
+    
+}
+.projectmanagement_mainContainer .projectmanagement_innerContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
 /*---------channel partner----------------------------------*/
 .channel_partnerProgram{
     background-color: var(--colors-white-50);
@@ -1212,7 +1239,7 @@ rgb(0, 0, 0) 100%
 
 /*---------Channel partner program---------------------*/
 .channel_maincontainer{
-    background-image: url("../images/channelpartner.gif");
+    background-image: url("../images/channelpartner\ 2.gif");
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
@@ -1220,7 +1247,7 @@ rgb(0, 0, 0) 100%
     background-repeat:  no-repeat;
     background-size:  cover;
     position: relative;
-}
+}uu
 .channel_innerContainer{
    padding-left: 60px; 
    padding-right: 60px;
@@ -1250,12 +1277,12 @@ rgb(0, 0, 0) 100%
     gap: 1.5rem;
 }
 .channel_imgContainer{
-    width: 550px;
+    width: 100%;
 }
 .channel_imgContainer img{
     width: 100%;
-  
-    object-fit: fill;
+    height: 100%;
+    object-fit: cover;
 }
 .left_group.flex-col {
     flex-direction: column;
@@ -1696,5 +1723,57 @@ rgb(0, 0, 0) 100%
     gap: 1.8rem;
     justify-content: center;
 }
+/*------features projects*/
+.property_carouselContainer {
+    display: grid
+;
+    grid-template-columns: 425px 437px;
+    align-items: flex-end;
+    gap: 224px;
+    position: absolute;
+    top: 60%;
+    left: 7%;
+    width: 88%;
+    overflow: hidden;
+}
 
+.property_infoContainer {
+    width: 100%;
+}
 
+.property_infoContainer h3 {
+    margin-bottom: 1rem;
+}
+
+.property_infoContainer p {
+    margin: 1rem 0;
+}
+
+.sm-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.get-started {
+    cursor: pointer;
+}
+
+/* Carousel Styles */
+.carousel_container {
+    width: 100%;
+   
+    position: relative;
+}
+
+.properties {
+    flex: 0 0 auto;
+    width: 209px;
+    height: 190px;
+}
+
+.properties img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

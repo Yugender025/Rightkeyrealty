@@ -6,10 +6,11 @@ const propertiesList = [
       "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
     category: "commercial",
     projectHighlights: {
-      amenities: "reddy",
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       squarefeet:
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
     },
     propertyLink: "property1.html",
     img1: "https://rightkeyrealty.in/images/mayoora-1.jpg",
@@ -18,7 +19,7 @@ const propertiesList = [
   },
   {
     _id: 2,
-    title: "Mayoora",
+    title: "Kapil Business park",
     address:
       "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
     category: "commercial",
@@ -30,24 +31,99 @@ const propertiesList = [
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
     propertyLink: "property2.html",
-    img1: "",
-    img2: "",
-    img3: "",
+    img1: "assets/images/kapil-1.png",
+    img2: "assets/images/kapil-1.png",
+    img3: "assets/images/kapil-2.jpg",
   },
   {
     _id: 3,
-    title: "Mayoora",
-    address: "SR nagar",
-    category: "commercial",
+    title: "VR Infra",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    category: "Residential",
     projectHighlights: {
-      amenities: "",
-      squarefeet: "",
-      highlights: "",
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property3.html",
-    img1: "",
-    img2: "",
-    img3: "",
+    propertyLink: "property2.html",
+    img1: "assets/images/vrinfra1.jpeg",
+    img2: "assets/images/vrinfra2.jpeg",
+    img3: "assets/images/vrinfra1.jpeg",
+  },
+  {
+    _id: 4,
+    title: "Urbanrise",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    category: "Residential",
+    projectHighlights: {
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
+    },
+    propertyLink: "property2.html",
+    img1: "assets/images/urbanrise1.webp",
+    img2: "assets/images/urbanrise2.webp",
+    img3: "assets/images/urbanrise3.webp",
+  },
+  {
+    _id: 5,
+    title: "Myfair",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    category: "Residential",
+    projectHighlights: {
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
+    },
+    propertyLink: "property2.html",
+    img1: "assets/images/Villa.jpg",
+    img2: "assets/images/Villa.jpg",
+    img3: "assets/images/Villa.jpg",
+  },
+  {
+    _id: 6,
+    title: "Hallmark",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    category: "Residental",
+    projectHighlights: {
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
+    },
+    propertyLink: "property2.html",
+    img1: "assets/images/Asset 1.png",
+    img2: "assets/images/Asset 2.png",
+    img3: "assets/images/Asset 3.png",
+  },
+  {
+    _id: 7,
+    title: "Jewel park",
+    address:
+      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    category: "Residential",
+    projectHighlights: {
+      amenities:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      squarefeet:
+        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+      highlights: "GR Mayoora, nestled in the highly sought-after",
+    },
+    propertyLink: "property2.html",
+    img1: "assets/images/jewelpark.jpeg",
+    img2: "assets/images/jewelpark.jpeg",
+    img3: "assets/images/jewelpark.jpeg",
   },
 ];
 
@@ -83,7 +159,7 @@ function createPropertylist(products) {
                          <div class="property-card__share-section">
                              <div class="property-card__share-text">Share</div>
                              <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
-                         </div>
+                         </div>     
                       </div>
                       <div class="property-card__location-section">
                          <div class="property-card__location-icon"><i class="fa-light fa-location-dot"></i></div>
@@ -104,7 +180,7 @@ function createPropertylist(products) {
                                   onclick="showHighlight(this)">
                                   <i class="fa-light fa-building"></i>
                               </div>
-                              <div 
+                              <div b 
                                   class="property-card__highlight-tab-icon" 
                                   data-property-id="${products._id}"
                                   data-title="Square Feet" 
@@ -206,21 +282,49 @@ propertiesList.forEach((property) => {
 });
 //share-button
 
-document.getElementById("share-button").addEventListener("click", async () => {
-  const shareData = {
-    title: "Beautiful Villa",
-    text: "Check out this amazing property!",
-    url: window.location.href, // Adjust to your property's URL
-  };
+// Add this to your JavaScript file
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all share sections
+  const shareSections = document.querySelectorAll(
+    ".property-card__share-section"
+  );
 
-  try {
-    if (navigator.share) {
-      await navigator.share(shareData);
-      alert("Property shared successfully!");
-    } else {
-      alert("Share feature is not supported in this browser.");
-    }
-  } catch (error) {
-    console.error("Error sharing:", error);
-  }
+  shareSections.forEach((section) => {
+    const shareButton = section.querySelector(".property-card__share-icon");
+    const propertyId = section.dataset.propertyId;
+
+    const getShareData = (id) => ({
+      title: `Beautiful Villa ${id}`,
+      text: `Check out this amazing property! (Property #${id})`,
+      url: `${window.location.href}?property=${id}`,
+    });
+
+    shareButton.addEventListener("click", async () => {
+      const shareData = getShareData(propertyId);
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+          console.log(`Property ${propertyId} shared successfully!`);
+        } else {
+          // Fallback for browsers that don't support Web Share API
+          const fallbackShare = () => {
+            const tempInput = document.createElement("input");
+            tempInput.value = shareData.url;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            alert("Link copied to clipboard!");
+          };
+
+          fallbackShare();
+        }
+      } catch (error) {
+        console.error(`Error sharing property ${propertyId}:`, error);
+        alert("Unable to share at this time. Please try again later.");
+      }
+    });
+  });
 });
