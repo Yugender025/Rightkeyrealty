@@ -140,7 +140,10 @@
         <h2>Feature Projects</h2>
       </div>
       <div class="feature_projectsSlide">
-        <img style="width: 100%;" class="project_container" src="https://rightkeyrealty.in/images/mayoora-1.jpg" id="p1-d12" alt="property">
+        <div class="mainpropertyContainer">
+          <img style="width: 100%;" class="project_container" src="https://rightkeyrealty.in/images/mayoora-1.jpg" id="p1-d12" alt="property">
+        </div>
+          
          <div class="feature_projectPropertytype">
                 For sale
          </div> 
@@ -151,24 +154,27 @@
                 </div>
                 <p style="font-size: 14px;">Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</p>
                 <div class="sm-btn">
-                  <div id="how-link" class="get-started">View property</div>
+                  <div id="how-link" class="get-started"><a class="propertiesLinks" href="property1.html" target="_blank" rel="noopener noreferrer">View property</a></div>
                   <i class="fa-regular fa-arrow-right"></i>
                 </div>
              </div>
              <!--carousel type-->
              <div class="carousel_container">
-                <div class="properties">
-                  <img src="assets/images/kapil-1 (1).png" alt="mayoora">
+                <div class="carousel_innerContainer">
+                  <div class="properties">
+                    <img src="assets/images/kapil-1 (1).png" alt="mayoora">
+                  </div>
+                  <div class="properties">
+                    <img src="assets/images/mayoora-8.jpg" alt="sashimadhavi">
+                  </div>
+                  <div class="properties">
+                    <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil business">
+                  </div>
+                  <div class="properties">
+                    <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil towers">
+                  </div>
                 </div>
-                <div class="properties">
-                  <img src="assets/images/mayoora-8.jpg" alt="sashimadhavi">
-                </div>
-                <div class="properties">
-                  <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil business">
-                </div>
-                <div class="properties">
-                  <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="kapil towers">
-                </div>
+                
              </div>
              <!----carousel end-->
          </div>
@@ -707,6 +713,144 @@ document.querySelector('.section_banner').style.backgroundImage = "linear-gradie
 });
 
 </script>
+<script>
+  // Data structure for properties
+const properties = [
+    {
+        mainImage: "https://rightkeyrealty.in/images/mayoora-1.jpg",
+        title: "GR MAYOORA",
+        description: "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S",
+        saleType: "For sale",
+        propertyLink:"property1.html"
+    },
+    {
+        mainImage: "assets/images/mayoora-8.jpg",
+        title: "Sashimadhavi Complex",
+        description: "Prime location in the heart of the city with modern amenities and excellent connectivity",
+        saleType: "For rent",
+        propertyLink:"property1.html"
+    },
+    {
+        mainImage: "assets/images/kapil-1 (1).png",
+        title: "Kapil Business Park",
+        description: "Contemporary office spaces with state-of-the-art facilities and premium location",
+        saleType: "For sale",
+        propertyLink:"property1.html"
+    },
+    {
+        mainImage: "https://rightkeyrealty.in/images/mayoora-1.jpg",
+        title: "Kapil Towers",
+        description: "Luxury apartments with panoramic city views and world-class amenities",
+        saleType: "For sale",
+        propertyLink:"property1.html"
+    }
+];
 
+// Vanilla JavaScript Version
+document.addEventListener('DOMContentLoaded', function() {
+    const mainImage = document.querySelector('.mainpropertyContainer img');
+    const propertyTitle = document.querySelector('.pro_header h3');
+    const propertyDescription = document.querySelector('.property_infoContainer p');
+    const propertyType = document.querySelector('.feature_projectPropertytype');
+    const propertyThumbnails = document.querySelectorAll('.properties');
+    const propertLinks=document.querySelectorAll('.propertiesLinks');
+    const carouselContainer = document.querySelector('.carousel_innerContainer');
+    let currentIndex = 0;
+    
+    // Calculate the width of a single property for translation
+    const propertyWidth = 209; // Width of each property
+    const gap = 16; // Gap between properties
+    const totalWidth = propertyWidth + gap;
+    
+    // Clone the first few items and append them to the end for smooth looping
+    const itemsToClone = Array.from(propertyThumbnails).slice(0, 2);
+    itemsToClone.forEach(item => {
+        const clone = item.cloneNode(true);
+        carouselContainer.appendChild(clone);
+    });
+
+    // Update click listeners to include cloned elements
+    const allProperties = carouselContainer.querySelectorAll('.properties');
+    
+    function updateProperty(index, isLoop = false) {
+        // Handle looping
+        const totalItems = propertyThumbnails.length;
+        
+        if (index >= totalItems) {
+            // If we're at the end, quickly reset to start without animation
+            if (!isLoop) {
+                index = 0;
+                carouselContainer.style.transition = 'none';
+                carouselContainer.style.transform = 'translateX(0)';
+                // Force reflow
+                carouselContainer.offsetHeight;
+                carouselContainer.style.transition = 'transform 0.5s ease-in-out';
+            }
+        } else if (index < 0) {
+            // If we're at the start and going backwards
+            index = totalItems - 1;
+            const translateX = -index * totalWidth;
+            carouselContainer.style.transform = `translateX(${translateX}px)`;
+        }
+
+        // Add fade out effect for main image
+        mainImage.style.opacity = '0';
+        
+        // Calculate translation distance
+        const translateX = -index * totalWidth;
+        
+        // Apply smooth translation to carousel container
+        carouselContainer.style.transform = `translateX(${translateX}px)`;
+        if (!isLoop) {
+            carouselContainer.style.transition = 'transform 0.5s ease-in-out';
+        }
+
+        // Update content with looping in mind
+        const actualIndex = index % totalItems;
+        
+        setTimeout(() => {
+            mainImage.src = properties[actualIndex].mainImage;
+            propertyTitle.textContent = properties[actualIndex].title;
+            propertyDescription.textContent = properties[actualIndex].description;
+            propertyType.textContent = properties[actualIndex].saleType;
+            
+            // Add fade in effect
+            mainImage.style.opacity = '1';
+        }, 300);
+
+        // Update active thumbnail
+        propertyThumbnails.forEach((thumbnail, i) => {
+            if (i === actualIndex) {
+                thumbnail.classList.add('active-thumbnail');
+            } else {
+                thumbnail.classList.remove('active-thumbnail');
+            }
+        });
+
+        currentIndex = actualIndex;
+    }
+
+    // Add click event listeners to all properties including clones
+    allProperties.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            updateProperty(index);
+        });
+    });
+
+    // Handle carousel container transition end
+    carouselContainer.addEventListener('transitionend', () => {
+        if (currentIndex >= propertyThumbnails.length) {
+            // Reset to start without animation
+            carouselContainer.style.transition = 'none';
+            currentIndex = 0;
+            const translateX = -currentIndex * totalWidth;
+            carouselContainer.style.transform = `translateX(${translateX}px)`;
+        }
+    });
+
+    
+});
+
+</script>
 </body>
 </html>

@@ -10,7 +10,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       squarefeet:
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+      highlights: "East and west",
     },
     propertyLink: "property1.html",
     img1: "https://rightkeyrealty.in/images/mayoora-1.jpg",
@@ -28,7 +28,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       squarefeet:
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+      highlights: "East and west",
     },
     propertyLink: "property2.html",
     img1: "assets/images/kapil-1.png",

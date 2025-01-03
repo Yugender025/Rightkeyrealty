@@ -535,9 +535,9 @@ nav .hero_section img {
 .properties img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
-.carousel_container {
+.carousel_innerContainer {
     display: flex
 ;
     flex-direction: row;
@@ -1730,10 +1730,71 @@ rgb(0, 0, 0) 100%
     gap: 1.8rem;
     justify-content: center;
 }
-/*------features projects*/
+/* Animation styles */
+
+/* Featured Projects - Main Container */
+.mainpropertyContainer {
+    position: relative;
+}
+
+.mainpropertyContainer img {
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Property Cards */
+.properties {
+    position: relative;
+    cursor: pointer;
+    flex: 0 0 209px;
+    width: 209px;
+    height: 190px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.properties:hover img {
+    filter: brightness(1.1);
+}
+
+/* Active Thumbnail Styles */
+.active-thumbnail {
+    position: relative;
+    border: 2px solid #3B82F6;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.active-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+/* Property Information Container */
+.property_infoContainer {
+    width: 100%;
+}
+
+.property_infoContainer h3 {
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.property_infoContainer p {
+    margin: 1rem 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Carousel Layout */
 .property_carouselContainer {
-    display: grid
-;
+    display: grid;
     grid-template-columns: 425px 437px;
     align-items: flex-end;
     gap: 224px;
@@ -1744,18 +1805,42 @@ rgb(0, 0, 0) 100%
     overflow: hidden;
 }
 
-.property_infoContainer {
-    width: 100%;
+.carousel_container {
+    overflow: hidden;
+    padding-left: 0.5rem;
 }
 
-.property_infoContainer h3 {
-    margin-bottom: 1rem;
+.carousel_innerContainer {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
 }
 
-.property_infoContainer p {
-    margin: 1rem 0;
+/* Carousel Gradient Masks */
+.carousel_innerContainer::before,
+.carousel_innerContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    pointer-events: none;
+    z-index: 1;
 }
 
+.carousel_innerContainer::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.carousel_innerContainer::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* Button Styles */
 .sm-btn {
     display: flex;
     align-items: center;
@@ -1766,23 +1851,49 @@ rgb(0, 0, 0) 100%
     cursor: pointer;
 }
 
-/* Carousel Styles */
-.carousel_container {
-    width: 100%;
-   
+/* Loading State */
+.mainpropertyContainer.loading {
     position: relative;
 }
 
-.properties {
-    flex: 0 0 auto;
-    width: 209px;
-    height: 190px;
+.mainpropertyContainer.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3B82F6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
-.properties img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/*----------see all **********/
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .property_carouselContainer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .properties {
+        width: 160px;
+        height: 145px;
+    }
+    
+    .carousel_innerContainer {
+        gap: 12px;
+    }
+}
