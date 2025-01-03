@@ -48,7 +48,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property2.html",
+    propertyLink: "property3.html",
     img1: "assets/images/vrinfra1.jpeg",
     img2: "assets/images/vrinfra2.jpeg",
     img3: "assets/images/vrinfra1.jpeg",
@@ -66,7 +66,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property2.html",
+    propertyLink: "property4.html",
     img1: "assets/images/urbanrise1.webp",
     img2: "assets/images/urbanrise2.webp",
     img3: "assets/images/urbanrise3.webp",
@@ -84,7 +84,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property2.html",
+    propertyLink: "property5.html",
     img1: "assets/images/Villa.jpg",
     img2: "assets/images/Villa.jpg",
     img3: "assets/images/Villa.jpg",
@@ -102,7 +102,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property2.html",
+    propertyLink: "property6.html",
     img1: "assets/images/Asset 1.png",
     img2: "assets/images/Asset 2.png",
     img3: "assets/images/Asset 3.png",
@@ -120,7 +120,7 @@ const propertiesList = [
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       highlights: "GR Mayoora, nestled in the highly sought-after",
     },
-    propertyLink: "property2.html",
+    propertyLink: "property7.html",
     img1: "assets/images/jewelpark.jpeg",
     img2: "assets/images/jewelpark.jpeg",
     img3: "assets/images/jewelpark.jpeg",
@@ -178,7 +178,7 @@ function createPropertylist(products) {
                                     "N/A"
                                   }"
                                   onclick="showHighlight(this)">
-                                  <i class="fa-light fa-building"></i>
+                                  <i class="fa-regular fa-buildings"></i>
                               </div>
                               <div b 
                                   class="property-card__highlight-tab-icon" 
@@ -189,18 +189,18 @@ function createPropertylist(products) {
                                     "N/A"
                                   }"
                                   onclick="showHighlight(this)">
-                                  <i class="fa-light fa-building"></i>
+                                  <i class="fa-regular fa-square"></i>
                               </div>
                               <div 
                                   class="property-card__highlight-tab-icon" 
                                   data-property-id="${products._id}"
-                                  data-title="Highlights" 
+                                  data-title="Facing" 
                                   data-description="${
                                     products.projectHighlights.highlights ||
                                     "N/A"
                                   }"
                                   onclick="showHighlight(this)">
-                                  <i class="fa-light fa-building"></i>
+                                  <i class="fa-regular fa-thin fa-distribute-spacing-vertical"></i>
                               </div>
                           </div>
                           

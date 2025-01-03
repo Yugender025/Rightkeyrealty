@@ -38,7 +38,7 @@
             </button>
             <div class="menu_items">
                 <ul class="menu_links">
-                    <li><a href="#">Propeties</a></li>
+                    <li><a href="properties.html">Propeties</a></li>
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
@@ -55,7 +55,7 @@
                 <div id="map-container" style="width: 100%; height: 400px; border-radius: 12px; margin-bottom: 2rem;">
                     <iframe 
                     style="width: 100%; height: 100%; border-radius: 12px; border: none;" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.9720356264497!2d78.46000507369244!3d17.508848299297643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91c420d0b055%3A0xfa2c0b6d5571fc61!2sG%20R%20Mayoora!5e0!3m2!1sen!2sin!4v1733224910037!5m2!1sen!2sin&center=17.508848299297643,78.46500507369244" 
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d475.5869275554942!2d78.36229654156642!3d17.522047041027456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1735637374625!5m2!1sen!2sin" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
@@ -69,25 +69,49 @@
             <div class="projectContainer">
                 <div class="imgsContainer">
                     <div class="mainImgcontainer">
-                        <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="" srcset="">
+                        <img src="assets/images/vrinfra1.jpeg" alt="" srcset="">
                     </div>
                     <div class="seeAllcontainer">
                         <p>See all</p>
                     </div>
                 </div>
+                <div class="modal" id="imageModal">
+                    <div class="modal-content">
+                        <button class="close-btn">×</button>
+                        <div class="carousel-container">
+                            <div class="carousel" id="imageCarousel">
+                                <img src="assets/images/kapil-1.png" alt="Image 1">
+                                <img src="assets/images/kapil-1.png" alt="Image 2">
+                                <img src="assets/images/kapil-1.png" alt="Image 3">
+                                <img src="assets/images/kapil-1.png" alt="Image 4">
+                                <img src="assets/images/kapil-1.png" alt="Image 5">
+                            </div>
+                            <button class="nav-btn prev-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 18l-6-6 6-6" />
+                                </svg>
+                            </button>
+                            <button class="nav-btn next-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="projectInfoContainer">
                     <div class="infoHeadercontainer">
-                        <h3>GR Mayoora</h3>
+                        <h3>VR Infra Projects</h3>
                         <p class="descrp">
-                            Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S
+                            Krishanaja Hills, Bachupally, Medchal-Malkajgiri(Dist), T.S
                         </p>
                     </div>
                     <div class="secondaryImgs">
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-2.jpg" alt="" srcset="">
+                            <img src="assets/images/vrinfra2.jpeg" alt="" srcset="">
                         </div>
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-3.jpg" alt="" srcset="">
+                            <img src="assets/images/vrinfra1.jpeg" alt="" srcset="">
                         </div>
                     </div>
                     <div class="property-card__cta-button">
@@ -100,15 +124,16 @@
         <div class="projectdetails_Container">
             <div class="projectheader_Container">
                 <div class="main_headerContainer">
-                    <h2>GR MAYOORA Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</h2>
+                    <h2>VR Infra Projects
+                        Krishanaja Hills, Bachupally, Medchal-Malkajgiri(Dist), T.S</h2>
                      <div class="property-card__share-section">
                             <div class="property-card__share-text">Share</div>
                             <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
                      </div>
                 </div>
                 <div class="caption_headerContainer">
-                    <h3 class="highlight">Ready to move in 2&3 BHK Gated Community Apartments </h3>
-                    <p>Luxury Living at GR Mayoora</p>
+                    <h3 class="highlight">Ready to move in 2BHK</h3>
+                    <p>Luxury Living at VR Infra</p>
                 </div>
             </div>
             <hr style="margin-top: 0.8rem;">
@@ -132,7 +157,7 @@
             </div>
             <hr>
             <div class="content_projectDetails">
-                <!-- <content></content> -->
+                <!-- <content></content js> -->
                 
             </div>
             <hr>
@@ -234,14 +259,13 @@
      </footer>
 <script>
     // Function to update the content
-function updateContent(section) {
-    const contentDetails = document.querySelector('.content_projectDetails');
+
 
     const contentMap = {
         'Overview': `      <div class="overview_flex-col">
                                 <div class="flex-row">
                                     <h4>Project Name</h4>
-                                    <p>GR MAYOORA</p>
+                                    <p>VR Infra</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Total AREA </h4>
@@ -249,16 +273,13 @@ function updateContent(section) {
                                 </div>
                                 <div class="flex-row">
                                     <h4>Total Blocks</h4>
-                                    <p>2 BLOCKS(A & B)</p>
+                                    <p>3 BLOCKS(A, B & C)</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>2 BHK Size</h4>
-                                    <p>1100SFT - 1195SFT</p>
+                                    <p>1150SFT</p>
                                 </div>
-                                <div class="flex-row">
-                                    <h4>3 BHK Size</h4>
-                                    <p>1435SFT - 1565SFT</p>
-                                </div>
+                
                                 <div class="flex-row">
                                     <h4>Floors &nbsp; &nbsp;</h4>
                                     <p>G+5(CELLAR PARKING)</p>
@@ -269,21 +290,18 @@ function updateContent(section) {
                                 </div>
                                 <div class="flex-row">
                                     <h4>Possesion</h4>
-                                    <p>Ready to moveA</p>
+                                    <p>Expected to July 2026</p>
                                 </div>
-                                <div class="flex-row">
-                                    <h4>Club House</h4>
-                                    <p>4000SFT,G+4 WITH ALL AMENITES</p>
-                                </div>
+                                
                                 <div class="flex-row">
                                     <h4>Loan Facility</h4>
                                     <p>APPROVED BY ALL BANKS</p>
                                 </div>
                             </div>`,
         'Amenities': `<div class="amienties_flex-col">
-                        <div class="flex-col">
+                        <div class="flex-col"> 
                             <div class="flex-row">
-                                <i class="fa-solid fa-car"></i>
+                                <i class="fa-solid  fa-car"></i>
                                 <p>Car parking</p>
                             </div>  
                             <div class="flex-row">
@@ -328,7 +346,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SCHOOLS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>VRS Vignana Jyothi School, Joy International School, Velocity High School.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -337,7 +355,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY COLLEGES</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Gokaraju Rangaraju Institute of Engineering & Technology, Mahindra university, Malla Reddy University.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -346,7 +364,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY HOSPITALS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>VR Multi specality hospital, Malla Reddy hospitals</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -355,19 +373,17 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SUPERMARKETS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p> D-mart, Vijetha Supermarkets</p>
                             </div>
                         </div>
                     </div>`,
         'About': `
             <p id="about">
-                Experience the epitome of luxury living with <strong>GR Mayoora</strong>, where every detail is crafted to elevate your lifestyle.
+                Experience the epitome of luxury living with VR Vikyath Iconia, where every detail is crafted to elevate your lifestyle.
                 <br><br>
-                Nestled in the tranquil neighborhood of <strong>Suchitra</strong>, these spacious and splendid 2 and 3-bedroom apartments redefine contemporary living. From the moment you step inside, you'll be greeted by meticulously designed spaces that exude elegance and sophistication. Whether it's unwinding in the lavish interiors, indulging in the state-of-the-art amenities, or simply finding solace in your favorite corner, GR Mayoora offers a sanctuary where you can create cherished memories and embrace the finer things in life.
+                Nestled in the tranquil neighborhood near Krishnaja Hills, Bachupally, these spacious 2-bedroom apartments redefine contemporary living. From the moment you step inside, you'll be greeted by meticulously designed spaces that exude elegance and sophistication. Whether it's unwinding in the lavish interiors, indulging in the state-of-the-art amenities, or simply finding solace in your favorite corner, VR Vikyath Iconia offers a sanctuary where you can create cherished memories and embrace the finer things in life.
                 <br><br>
-                Come, embark on a journey of luxury and comfort, and make GR Mayoora your ultimate abode where every moment is a celebration of exquisite living.
-                <br><br>
-                <strong>Prime Location:</strong> GR Mayoora, nestled in the highly sought-after location of <strong>Suchitra</strong>, stands as a testament to the rapid growth and development of the area. Situated adjacent to the prominent landmark of <strong>Kompally</strong>, this bustling neighborhood ensures proximity to everything you need for a convenient lifestyle. From leading tech parks to renowned educational institutions, top-notch healthcare facilities, shopping centers, and entertainment hubs, everything is within arm's reach.
+                <strong>Prime Location:</strong> VR Vikyath Iconia, ituated in the highly sought-after area near Krishnaja Hills, Bachupally, stands as a testament to the rapid growth and development of the region. This bustling neighborhood ensures proximity to everything you need for a convenient lifestyle. From leading tech parks to renowned educational institutions, top-notch healthcare facilities, shopping centers, and entertainment hubs, everything is within arm's reach.
                 <br><br>
                 The apartments at GR Mayoora are thoughtfully designed to provide residents with a luxurious lifestyle, offering spacious 2 and 3-bedroom options that truly redefine contemporary living.
             </p>
@@ -375,44 +391,48 @@ function updateContent(section) {
         'Contact': '<p>Get in touch with us for more information or inquiries.</p>'
     };
 
+   // Function to update the content
+function updateContent(section) {
+    const contentDetails = document.querySelector('.content_projectDetails');
+    
     // Set the content based on the section clicked
     contentDetails.innerHTML = contentMap[section] || '<p>Content not available.</p>';
 
-    // Highlight the active section
+    // Remove active class from all sections
     document.querySelectorAll('.projectflex_details > div').forEach(div => {
-        div.classList.remove('active'); // Remove the 'active' class
+        div.classList.remove('active');
     });
 
-    // Dynamically find the corresponding div by matching its class name
+    // Mapping of sections to their corresponding class names
     const sectionClassMap = {
-        Overview: 'Overview',
-        Amenities: 'amientiesContainer',
-        Location: 'Locationhighlights',
-        About: 'aboutprojectContainer',
+        'Overview': 'Overview',
+        'Amenities': 'amientiesContainer',
+        'Location': 'Locationhighlights',
+        'About': 'aboutprojectContainer'
     };
 
-    const targetClass = sectionClassMap[section]; // Get the mapped class name
+    // Add active class to the selected section
+    const targetClass = sectionClassMap[section];
     const activeDiv = document.querySelector(`.projectflex_details > .${targetClass}`);
-
     if (activeDiv) {
-        activeDiv.classList.add('active'); // Add the 'active' class
+        activeDiv.classList.add('active');
     }
-
-    // Find the corresponding div to highlight based on the section name
-    window.onload = function () {
-        const propertyCards = document.querySelectorAll(".property_cardContainer");
-    propertyCards.forEach((card) => {
-    const defaultTab = card.querySelector(
-      ".property-card__highlight-tab-icon:nth-child(1)"
-    );
-    if (defaultTab) {
-      defaultTab.click(); // Simulate a click to initialize
-    }
-  });
-    updateContent('Overview');
-    
-};
 }
+
+// Initialize property cards and set default content
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize property cards
+    const propertyCards = document.querySelectorAll(".property_cardContainer");
+    propertyCards.forEach(card => {
+        const defaultTab = card.querySelector(".property-card__highlight-tab-icon:nth-child(1)");
+        if (defaultTab) {
+            defaultTab.click();
+        }
+    });
+
+    // Set default Overview content
+    updateContent('Overview');
+});
 
 
 
@@ -420,7 +440,7 @@ function updateContent(section) {
 
 </script>
 <script src="assets/js/properties.js"></script>
-
+<script src="assets/js/carousel.js"></script>
 </body>
 </html>    
 

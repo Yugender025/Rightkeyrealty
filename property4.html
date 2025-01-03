@@ -38,7 +38,7 @@
             </button>
             <div class="menu_items">
                 <ul class="menu_links">
-                    <li><a href="#">Propeties</a></li>
+                    <li><a href="properties.html">Propeties</a></li>
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
@@ -55,7 +55,7 @@
                 <div id="map-container" style="width: 100%; height: 400px; border-radius: 12px; margin-bottom: 2rem;">
                     <iframe 
                     style="width: 100%; height: 100%; border-radius: 12px; border: none;" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.9720356264497!2d78.46000507369244!3d17.508848299297643!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91c420d0b055%3A0xfa2c0b6d5571fc61!2sG%20R%20Mayoora!5e0!3m2!1sen!2sin!4v1733224910037!5m2!1sen!2sin&center=17.508848299297643,78.46500507369244" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.6488796064887!2d78.34553577369287!3d17.52426679885042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8d441f49c113%3A0xaa26fd460efbb752!2sUrbanrise%20The%20World%20Of%20Joy!5e0!3m2!1sen!2sin!4v1735634872497!5m2!1sen!2sin" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
@@ -69,25 +69,49 @@
             <div class="projectContainer">
                 <div class="imgsContainer">
                     <div class="mainImgcontainer">
-                        <img src="https://rightkeyrealty.in/images/mayoora-1.jpg" alt="" srcset="">
+                        <img src="assets/images/urbanrise3.webp" alt="" srcset="">
                     </div>
                     <div class="seeAllcontainer">
                         <p>See all</p>
                     </div>
                 </div>
+                <div class="modal" id="imageModal">
+                    <div class="modal-content">
+                        <button class="close-btn">×</button>
+                        <div class="carousel-container">
+                            <div class="carousel" id="imageCarousel">
+                                <img src="assets/images/kapil-1.png" alt="Image 1">
+                                <img src="assets/images/kapil-1.png" alt="Image 2">
+                                <img src="assets/images/kapil-1.png" alt="Image 3">
+                                <img src="assets/images/kapil-1.png" alt="Image 4">
+                                <img src="assets/images/kapil-1.png" alt="Image 5">
+                            </div>
+                            <button class="nav-btn prev-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 18l-6-6 6-6" />
+                                </svg>
+                            </button>
+                            <button class="nav-btn next-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="projectInfoContainer">
                     <div class="infoHeadercontainer">
-                        <h3>GR Mayoora</h3>
+                        <h3>Urbanrise</h3>
                         <p class="descrp">
-                            Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S
+                            Survey No. 178 to 181, Ameenpur, Miyapur, Hyderabad, T.S 502032
                         </p>
                     </div>
                     <div class="secondaryImgs">
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-2.jpg" alt="" srcset="">
+                            <img src="assets/images/urbanrise2.webp" alt="" srcset="">
                         </div>
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-3.jpg" alt="" srcset="">
+                            <img src="assets/images/urbanrise3.webp" alt="" srcset="">
                         </div>
                     </div>
                     <div class="property-card__cta-button">
@@ -100,15 +124,15 @@
         <div class="projectdetails_Container">
             <div class="projectheader_Container">
                 <div class="main_headerContainer">
-                    <h2>GR MAYOORA Near Godavari Homes, Medchal-Malkajgiri(Dist), T.S</h2>
+                    <h2>Urban rise The Joy of world Ameenpur, Miyapur, Hyderabad, T.S</h2>
                      <div class="property-card__share-section">
                             <div class="property-card__share-text">Share</div>
                             <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
                      </div>
                 </div>
                 <div class="caption_headerContainer">
-                    <h3 class="highlight">Ready to move in 2&3 BHK Gated Community Apartments </h3>
-                    <p>Luxury Living at GR Mayoora</p>
+                    <h3 class="highlight">Ready to move in 2.5 & 3 BHK Gated Community Apartments </h3>
+                    <p>Luxury Living at Urbanrise</p>
                 </div>
             </div>
             <hr style="margin-top: 0.8rem;">
@@ -234,26 +258,25 @@
      </footer>
 <script>
     // Function to update the content
-function updateContent(section) {
-    const contentDetails = document.querySelector('.content_projectDetails');
+
 
     const contentMap = {
         'Overview': `      <div class="overview_flex-col">
                                 <div class="flex-row">
                                     <h4>Project Name</h4>
-                                    <p>GR MAYOORA</p>
+                                    <p>Urbanrise The World of Joy</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Total AREA </h4>
-                                    <p>1.3 ACERS</p>
+                                    <p>10.6 ACERS</p>
                                 </div>
                                 <div class="flex-row">
-                                    <h4>Total Blocks</h4>
-                                    <p>2 BLOCKS(A & B)</p>
+                                    <h4>Total Blocks(5)</h4>
+                                    <p>2 BLOCKS(B & C) <span style="color:#02e902; font-weight:bold;">Live</span></p>
                                 </div>
-                                <div class="flex-row">
-                                    <h4>2 BHK Size</h4>
-                                    <p>1100SFT - 1195SFT</p>
+                                 <div class="flex-row">
+                                    <h4>Facing</h4>
+                                    <p>EAST & WEST</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>3 BHK Size</h4>
@@ -261,19 +284,20 @@ function updateContent(section) {
                                 </div>
                                 <div class="flex-row">
                                     <h4>Floors &nbsp; &nbsp;</h4>
-                                    <p>G+5(CELLAR PARKING)</p>
+                                    <p>G+42 </p>
                                 </div>
-                                <div class="flex-row">
-                                    <h4>Facing</h4>
-                                    <p>EAST & WEST</p>
+                                 <div class="flex-row">
+                                    <h4>2.5 BHK Size</h4>
+                                    <p>1100SFT - 1195SFT</p>
                                 </div>
+                               
                                 <div class="flex-row">
                                     <h4>Possesion</h4>
-                                    <p>Ready to moveA</p>
+                                    <p>Expected from December 2026</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Club House</h4>
-                                    <p>4000SFT,G+4 WITH ALL AMENITES</p>
+                                    <p>Over 100,000 sq.ft. of clubhouse space</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Loan Facility</h4>
@@ -283,12 +307,12 @@ function updateContent(section) {
         'Amenities': `<div class="amienties_flex-col">
                         <div class="flex-col">
                             <div class="flex-row">
-                                <i class="fa-solid fa-car"></i>
-                                <p>Car parking</p>
+                                <i class="fa-solid fa-bridge-suspension"></i>
+                                <p>Elevated sky walk</p>
                             </div>  
                             <div class="flex-row">
-                                <i class="fa-solid fa-transformer-bolt"></i>
-                                <p>TSSPDCL (Transformer, Electrical Panel Board and 3-Phase Energy meters)</p>
+                                <i class="fa-solid fa-sun-haze"></i>
+                                <p>Sun seating aera</p>
                             </div>  
                             <div class="flex-row">
                                 <i class="fa-solid fa-house-window"></i>
@@ -303,21 +327,25 @@ function updateContent(section) {
                                 <p>Table tennis</p>
                             </div>  
                             <div class="flex-row">
-                                <i class="fa-solid fa-elevator"></i>
-                                <p>Two Lifts</p>
+                                <i class="fa-solid fa-laptop"></i>
+                                <p>Co working space</p>
                             </div>  
                             <div class="flex-row">
-                                <i class="fa-solid fa-road"></i>
-                                <p>14 feet entire building setback area can be utilized for walking</p>
+                                <i class="fa-solid fa-party-horn"></i>
+                                <p>Kitty party</p>
                             </div>  
 
                             <div class="flex-row">
-                                <i class="fa-solid fa-refrigerator"></i>
-                                <p>Generator</p>
+                                <i class="fa-solid fa-dumbbell"></i>
+                                <p>Yoga space</p>
                             </div>  
                             <div class="flex-row">
-                                <i class="fa-solid fa-dumbbell"></i>
-                                <p>GYM area</p>
+                                <i class="fa-solid fa-meteor"></i>
+                                <p>Zero gravity Yoga room</p>
+                            </div> 
+                            <div class="flex-row">
+                                <i class="fa-solid fa-water"></i>
+                                <p>3.5 Acres Park by the Lake Amenities</p>
                             </div> 
                         </div>
                     </div>`,
@@ -328,7 +356,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SCHOOLS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Sentia Global School, Delhi Public School, Creek International School.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -337,7 +365,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY COLLEGES</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Gokaraju Rangaraju Institute of Engineering & Technology, Mahindra university, Malla Reddy University.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -346,7 +374,7 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY HOSPITALS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Mirra Hospital, Vijaya Hospital, Malla Reddy Hospitals.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -355,72 +383,75 @@ function updateContent(section) {
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SUPERMARKETS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>GSM Mall, Jio mart, D-mart, Vijetha Supermarkets,Sriven Mall.</p>
                             </div>
                         </div>
                     </div>`,
         'About': `
             <p id="about">
-                Experience the epitome of luxury living with <strong>GR Mayoora</strong>, where every detail is crafted to elevate your lifestyle.
+                Urbanrise The World of Joy, located in the serene neighborhood of Ameenpur near Miyapur, Hyderabad, offers an unparalleled living experience that seamlessly blends luxury, comfort, and convenience. This expansive 12.1-acre development features five high-rise towers, each soaring to 42 floors, providing residents with breathtaking views of the tranquil Ameenpur Lake and the vibrant city skyline.
                 <br><br>
-                Nestled in the tranquil neighborhood of <strong>Suchitra</strong>, these spacious and splendid 2 and 3-bedroom apartments redefine contemporary living. From the moment you step inside, you'll be greeted by meticulously designed spaces that exude elegance and sophistication. Whether it's unwinding in the lavish interiors, indulging in the state-of-the-art amenities, or simply finding solace in your favorite corner, GR Mayoora offers a sanctuary where you can create cherished memories and embrace the finer things in life.
+                Urbanrise The World of Joy in Miyapur, Hyderabad, offers an extensive array of 203 meticulously planned amenities designed to enhance the living experience of its residents. These amenities are thoughtfully distributed across various zones within the development
                 <br><br>
-                Come, embark on a journey of luxury and comfort, and make GR Mayoora your ultimate abode where every moment is a celebration of exquisite living.
+                <strong>Prime Location:</strong>Urbanrise The World of Joy, located in the serene neighborhood of Ameenpur near Miyapur, <strong>Hyderabad,</strong> offers an unparalleled living experience that seamlessly blends luxury, comfort, and convenience. This expansive 12.1-acre development features five high-rise towers, each soaring to 42 floors, providing residents with breathtaking views of the tranquil Ameenpur Lake and the vibrant city skyline.
+
                 <br><br>
-                <strong>Prime Location:</strong> GR Mayoora, nestled in the highly sought-after location of <strong>Suchitra</strong>, stands as a testament to the rapid growth and development of the area. Situated adjacent to the prominent landmark of <strong>Kompally</strong>, this bustling neighborhood ensures proximity to everything you need for a convenient lifestyle. From leading tech parks to renowned educational institutions, top-notch healthcare facilities, shopping centers, and entertainment hubs, everything is within arm's reach.
-                <br><br>
-                The apartments at GR Mayoora are thoughtfully designed to provide residents with a luxurious lifestyle, offering spacious 2 and 3-bedroom options that truly redefine contemporary living.
+                Urbanrise The World of Joy offers a harmonious blend of luxury, convenience, and connectivity, making it an ideal choice for those seeking an elevated living experience in Hyderabad. With its prime location, state-of-the-art amenities, and commitment to quality, it stands as a testament to modern urban living.
+                
             </p>
         `,
         'Contact': '<p>Get in touch with us for more information or inquiries.</p>'
     };
 
+   // Function to update the content
+function updateContent(section) {
+    const contentDetails = document.querySelector('.content_projectDetails');
+    
     // Set the content based on the section clicked
     contentDetails.innerHTML = contentMap[section] || '<p>Content not available.</p>';
 
-    // Highlight the active section
+    // Remove active class from all sections
     document.querySelectorAll('.projectflex_details > div').forEach(div => {
-        div.classList.remove('active'); // Remove the 'active' class
+        div.classList.remove('active');
     });
 
-    // Dynamically find the corresponding div by matching its class name
+    // Mapping of sections to their corresponding class names
     const sectionClassMap = {
-        Overview: 'Overview',
-        Amenities: 'amientiesContainer',
-        Location: 'Locationhighlights',
-        About: 'aboutprojectContainer',
+        'Overview': 'Overview',
+        'Amenities': 'amientiesContainer',
+        'Location': 'Locationhighlights',
+        'About': 'aboutprojectContainer'
     };
 
-    const targetClass = sectionClassMap[section]; // Get the mapped class name
+    // Add active class to the selected section
+    const targetClass = sectionClassMap[section];
     const activeDiv = document.querySelector(`.projectflex_details > .${targetClass}`);
-
     if (activeDiv) {
-        activeDiv.classList.add('active'); // Add the 'active' class
+        activeDiv.classList.add('active');
     }
-
-    // Find the corresponding div to highlight based on the section name
-    window.onload = function () {
-        const propertyCards = document.querySelectorAll(".property_cardContainer");
-    propertyCards.forEach((card) => {
-    const defaultTab = card.querySelector(
-      ".property-card__highlight-tab-icon:nth-child(1)"
-    );
-    if (defaultTab) {
-      defaultTab.click(); // Simulate a click to initialize
-    }
-  });
-    updateContent('Overview');
-    
-};
 }
 
+// Initialize property cards and set default content
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize property cards
+    const propertyCards = document.querySelectorAll(".property_cardContainer");
+    propertyCards.forEach(card => {
+        const defaultTab = card.querySelector(".property-card__highlight-tab-icon:nth-child(1)");
+        if (defaultTab) {
+            defaultTab.click();
+        }
+    });
+
+    // Set default Overview content
+    updateContent('Overview');
+});
 
 
 
 
 </script>
 <script src="assets/js/properties.js"></script>
-
+<script src="assets/js/carousel.js"></script>
 </body>
 </html>    
 
