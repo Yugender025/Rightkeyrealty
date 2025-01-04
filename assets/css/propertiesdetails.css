@@ -552,14 +552,14 @@ body{
     }
   
     .secondaryImgs {
-      flex-direction: column;
+      flex-direction: row;
     }
   
     .seeAllcontainer {
       width: 80px;
       height: 40px;
-      top: 180px;
-      right: 10px;
+      top: -44px;
+      right: -204px;
       position: relative;
     }
   
