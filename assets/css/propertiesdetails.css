@@ -492,6 +492,7 @@ body{
       flex-wrap: wrap;
       gap: 0.5rem;
       justify-content: flex-start;
+      flex-direction: row;
     }
   
     .Location_highlightscontainer .flex-row {
@@ -513,6 +514,9 @@ body{
     .nearby_properties {
       width: 100%;
       margin-top: 2rem;
+    }
+    .property-card__cta-button{
+      display: none;
     }
   }
   
@@ -550,7 +554,7 @@ body{
   
     .projectflex_details {
       padding: 0.5rem;
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
     }
   

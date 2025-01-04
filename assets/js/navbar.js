@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const menuItems = document.querySelector(".menu_items");
-  const contactUs = document.querySelector(".contact-us");
 
   hamburger.addEventListener("click", function () {
     // Toggle active classes

@@ -238,30 +238,41 @@
         left: -100%;
         width: 100%;
         height: 100vh;
-        background-color: var(--colors-bahama-blue-100);
+        color:#fff ;
+        background-color: #0B3046;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         transition: left 0.3s ease-in-out;
         z-index: 9999;
+        
     }
-
+    .hamburger.active span {
+        background-color: #fff;
+    }
     .menu_items.active {
         left: 0;
+        padding-left: 3rem;
+        padding-top: 6rem;
     }
 
     .menu_links {
         flex-direction: column;
         gap: 2rem;
         text-align: center;
+        align-items: flex-start;
     }
-
-    .contact-us {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
+    .contact-us .btn{
+        background: none;
+        padding: 0;
     }
+    .contact-us .btn i{
+        display: none;
+    }
+    .menu_links li{
+        font-size: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -361,7 +372,7 @@
     }
 
     .who_Company .box {
-        width: 100%;
+        /* width: 100%; */
         height: auto;
         min-height: 120px;
     }
@@ -894,3 +905,5 @@
         image-rendering: -webkit-optimize-contrast;
     }
 }
+
+/*------------Testimonal containers---------------*/

@@ -267,7 +267,7 @@ nav .hero_section img {
 .hamburger span {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color: #000;
     transition: all 0.3s ease-in-out;
     transform-origin: center;
 }
@@ -275,6 +275,7 @@ nav .hero_section img {
 .contact-us {
     display: flex;
     align-items: center;
+    margin-left: 6rem;
 }
 
 .section_banner{
@@ -733,6 +734,7 @@ nav .hero_section img {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2rem;
+    overflow: hidden;
 }
 .team_memberContainer {
     display: flex;
@@ -1031,7 +1033,7 @@ footer .info2{
    
 }
 footer .designed_privacyCopyright{
-    width: 100%;
+    width: auto;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1587,7 +1589,7 @@ rgb(0, 0, 0) 100%
 /*-------------------properties cards--------------*/
 .properties_list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns:1fr 1fr;
         gap: 2rem;
     margin-top: 3rem;
     padding: 1rem 3.75rem 1rem 3.75rem;
@@ -1761,7 +1763,7 @@ rgb(0, 0, 0) 100%
 /* Active Thumbnail Styles */
 .active-thumbnail {
     position: relative;
-    border: 2px solid #3B82F6;
+   
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
