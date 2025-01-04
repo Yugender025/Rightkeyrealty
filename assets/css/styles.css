@@ -1586,8 +1586,7 @@ rgb(0, 0, 0) 100%
 
 /*-------------------properties cards--------------*/
 .properties_list{
-    display: grid
-    ;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 2rem;
     margin-top: 3rem;
