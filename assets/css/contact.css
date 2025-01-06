@@ -1,0 +1,273 @@
+
+/* Global Reset and Variables */
+:root {
+    --primary-color: #0C6098;
+    --secondary-color: #C2D7E5;
+    --text-color: #333333;
+    --error-color: #dc2626;
+    --success-color: #059669;
+    --border-color: #E5E7EB;
+    --background-overlay: rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+}
+
+
+
+
+
+/* Demo Button Styles */
+.demo-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.demo-button:hover {
+    background-color: #085180;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Modal Styles */
+.modal_form {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: var(--background-overlay);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: var(--spacing-md);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.modal_form.active {
+    display: flex;
+    opacity: 1;
+}
+
+.form-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal_form.active .form-card {
+    transform: scale(1);
+}
+
+/* Form Title Styles */
+.form-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.form-title span:first-child {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form-title span:last-child {
+    font-weight: 600;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.name-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(12, 96, 152, 0.1);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.error-message {
+    display: none;
+    color: var(--error-color);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: var(--error-color);
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* Button Styles */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background-color: #085180;
+}
+
+.submit-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+
+.submit-btn .spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.submit-btn.loading .spinner {
+    display: block;
+}
+
+.submit-btn.loading span {
+    visibility: hidden;
+}
+
+.close-btn {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: var(--border-color);
+    color: var(--primary-color);
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: var(--spacing-lg);
+}
+
+.success-message.active {
+    display: block;
+}
+
+.success-icon {
+    color: var(--success-color);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 640px) {
+    .name-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card {
+        padding: var(--spacing-md);
+    }
+
+    .form-title {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .form-card {
+        max-width: 560px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .form-card {
+        max-width: 640px;
+    }
+}

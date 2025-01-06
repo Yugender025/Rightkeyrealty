@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.scss">
     <link rel="stylesheet" href="assets/css/responive.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
@@ -600,7 +601,7 @@
         <h2>Contact our sales team to learn more about our company and success.</h2>
       </div>
        
-       <div class="contact_btn">
+       <div class="contact_btn"  id="contactButton">
          <button type="button">Talk to sales</button>
        </div>
     </div>
@@ -660,7 +661,59 @@
           </p>
        </div>
     </footer>
-   
+   <!------form-->
+   <div id="contactModal" class="modal">
+    <div class="form-card animate__animated animate__fadeIn">
+        <button class="close-btn" id="closeButton" aria-label="Close modal">×</button>
+        
+        <form id="contactForm" novalidate>
+            <div class="form-content">
+                <h2 class="form-title">
+                    <span>Get Job Ready for </span>
+                    <span>AWS Interviews</span>
+                </h2>
+                
+                <div class="name-contact">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        <div class="error-message">Please enter your name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                        <div class="error-message">Please enter a valid mobile number</div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    <div class="error-message">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                    <div class="error-message">Please enter your message</div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <div class="spinner"></div>
+                    <span>Submit</span>
+                </button>
+            </div>
+
+            <div class="success-message">
+                <div class="success-icon">✓</div>
+                <h3>Thank you for contacting us!</h3>
+                <p>We'll get back to you shortly.</p>
+            </div>
+        </form>
+    </div>
+</div>
+   <!------form end-->
       
  <script>
   document.addEventListener("DOMContentLoaded", function() {
@@ -900,6 +953,131 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optional: Add GSDevTools for debugging (if needed)
     // GSDevTools.create({ animation: tl, minimal: true });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('contactModal');
+      const contactButton = document.getElementById('contactButton');
+      const closeButton = document.getElementById('closeButton');
+      const form = document.getElementById('contactForm');
+      const formContent = document.querySelector('.form-content');
+      const successMessage = document.querySelector('.success-message');
+      const submitButton = document.querySelector('.submit-btn');
 
+      // Form fields
+      const fields = {
+          name: {
+              element: document.getElementById('name'),
+              validate: (value) => value.trim().length >= 2
+          },
+          mobile: {
+              element: document.getElementById('mobile'),
+              validate: (value) => /^[0-9]{10}$/.test(value.trim())
+          },
+          email: {
+              element: document.getElementById('email'),
+              validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())
+          },
+          message: {
+              element: document.getElementById('message'),
+              validate: (value) => value.trim().length >= 10
+          }
+      };
+
+      // Modal controls
+      function openModal() {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+          resetForm();
+      }
+
+      // Form validation and submission
+      function validateField(field, showError = true) {
+          const value = field.element.value;
+          const isValid = field.validate(value);
+          const formGroup = field.element.closest('.form-group');
+          
+          if (showError) {
+              formGroup.classList.toggle('error', !isValid);
+          }
+          
+          return isValid;
+      }
+
+      function validateForm() {
+          let isValid = true;
+          
+          for (const fieldName in fields) {
+              if (!validateField(fields[fieldName])) {
+                  isValid = false;
+              }
+          }
+          
+          return isValid;
+      }
+
+      function resetForm() {
+          form.reset();
+          formContent.style.display = 'block';
+          successMessage.classList.remove('active');
+          
+          // Reset all error states
+          for (const fieldName in fields) {
+              const formGroup = fields[fieldName].element.closest('.form-group');
+              formGroup.classList.remove('error');
+          }
+      }
+
+      // Event listeners
+      contactButton.addEventListener('click', openModal);
+      
+      closeButton.addEventListener('click', closeModal);
+      
+      modal.addEventListener('click', function(event) {
+          if (event.target === modal) {
+              closeModal();
+          }
+      });
+
+      // Live validation on blur
+      for (const fieldName in fields) {
+          fields[fieldName].element.addEventListener('blur', function() {
+              validateField(fields[fieldName]);
+          });
+      }
+
+      form.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          if (validateForm()) {
+              // Show loading state
+              submitButton.classList.add('loading');
+              submitButton.disabled = true;
+
+              // Simulate form submission
+              setTimeout(() => {
+                  submitButton.classList.remove('loading');
+                  submitButton.disabled = false;
+                  formContent.style.display = 'none';
+                  successMessage.classList.add('active');
+                  
+                  // Auto close after 3 seconds
+                  setTimeout(closeModal, 3000);
+              }, 1500);
+          }
+      });
+
+      // Keyboard accessibility
+      document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && modal.classList.contains('active')) {
+              closeModal();
+          }
+      });
+  });
+</script>
 </body>
 </html>
