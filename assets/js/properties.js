@@ -328,3 +328,59 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const shareSections = document.querySelectorAll(
+//     ".property-card__share-section"
+//   );
+
+//   shareSections.forEach((section) => {
+//     const shareButton = section.querySelector(".property-card__share-icon");
+//     // Get the property ID from the parent container
+//     const propertyContainer = section.closest(".property_cardContainer");
+//     const propertyId = propertyContainer
+//       ? propertyContainer.dataset.propertyId
+//       : null;
+
+//     const getShareData = (id) => ({
+//       title: `${
+//         propertiesList.find((p) => p._id.toString() === id)?.title || "Property"
+//       }`,
+//       text: `Check out this amazing property!`,
+//       url: `${window.location.href}?property=${id}`,
+//     });
+
+//     shareButton.addEventListener("click", async () => {
+//       if (!propertyId) {
+//         console.error("Missing property ID for section:", section.outerHTML);
+//         alert("Unable to share: Missing property information");
+//         return;
+//       }
+
+//       const shareData = getShareData(propertyId);
+
+//       try {
+//         if (navigator.share) {
+//           await navigator.share(shareData);
+//           console.log(`Property ${propertyId} shared successfully!`);
+//         } else {
+//           // Fallback for browsers that don't support Web Share API
+//           const fallbackShare = () => {
+//             const tempInput = document.createElement("input");
+//             tempInput.value = shareData.url;
+//             document.body.appendChild(tempInput);
+//             tempInput.select();
+//             document.execCommand("copy");
+//             document.body.removeChild(tempInput);
+
+//             alert("Link copied to clipboard!");
+//           };
+
+//           fallbackShare();
+//         }
+//       } catch (error) {
+//         console.error(`Error sharing property ${propertyId}:`, error);
+//         alert("Unable to share at this time. Please try again later.");
+//       }
+//     });
+//   });
+// });

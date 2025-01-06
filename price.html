@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta name="description" content="Explore a wide range of properties in Hyderabad. Find your dream home with expert assistance, detailed property listings, and verified information.">
+    <meta property="og:title" content="Find Your Dream Home in Hyderabad | Top Real Estate Solutions">
+    <meta property="og:description" content="Discover the best homes in Hyderabad. Browse verified listings, get expert guidance, and make your property search seamless.">
+    <title>Price predictions</title>
+    
+    <link rel="preconnect" href="" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="">
+   
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responive.css">
+    <link rel="stylesheet" href="assets/css/price.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <!-- <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --success-color: #16a34a;
+            --warning-color: #ea580c;
+            --danger-color: #dc2626;
+            --background-color: #f1f5f9;
+            --card-background: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .header {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .filter-section {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .filter-select {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            width: 200px;
+            color: var(--text-primary);
+            background-color: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .filter-select:hover {
+            border-color: var(--primary-color);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .metric-card {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 0.5rem 0;
+        }
+
+        .chart-container {
+            background: var(--card-background);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .trend-indicator {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .up { color: var(--success-color); }
+        .down { color: var(--danger-color); }
+        .neutral { color: var(--warning-color); }
+
+        @media (max-width: 768px) {
+            .container {
+                gap: 1rem;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hero_section">
+                <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
+            </div>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="menu_items">
+                <ul class="menu_links">
+                    <li><a href="properties.html">Propeties</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="channelpartner.html">Channel Partner</a></li>
+                    <li><a href="About.html">About us</a></li>
+                    <div class="contact-us">
+                      <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+                    </div>
+                </ul>
+               
+            </div>
+           
+        </nav>
+    </header>
+    <div class="container">
+        <div class="header">
+            <h2>Real Estate Analytics Dashboard</h2>
+            <div>Last updated: <span id="update-time"></span></div>
+        </div>
+
+        <div class="filter-section">
+            <label for="regionFilter">Select Region: </label>
+            <select id="regionFilter" class="filter-select">
+                <option value="All">All Regions</option>
+                <option value="North">North</option>
+                <option value="South">South</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+            </select>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>Market Value</h3>
+                <div class="metric-value" id="marketValue">$0</div>
+                <div class="trend-indicator">
+                    <i class="fas fa-arrow-up up"></i>
+                    <span id="trendText"></span>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Local Growth</h3>
+                <div class="metric-value" id="localGrowth">0%</div>
+                <div class="trend-indicator">
+                    <i class="fas fa-arrow-up up" id="growthUp"></i>
+                    <span id="growthText"></span>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>Inventory Levels</h3>
+                <div class="metric-value" id="inventoryLevels">0%</div>
+                <div class="trend-indicator">
+                    <i class="fas fa-arrow-down down" id="inventoryDown"></i>
+                    <span id="inventoryText"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h3>12 Month Price Forecast</h3>
+            <canvas id="forecastChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3>Historical Price Trends</h3>
+            <canvas id="historicalChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h3>Prediction Confidence</h3>
+            <canvas id="confidenceChart"></canvas>
+        </div>
+    </div>
+<script>
+            let allData = [];
+        let forecastChart, historicalChart, confidenceChart;
+
+        const regionMapping = {
+            "North": ["Alwal", "Kompally", "Shamirpet", "Medchal"],
+            "South": ["LB Nagar", "Shamshabad", "Uppal", "Hayathnagar"],
+            "East": ["Boduppal", "Nacharam", "Malkajgiri", "ECIL"],
+            "West": ["Hitech City", "Madhapur", "Gachibowli", "Kukatpally", "Manikonda", "Kondapur"]
+        };
+
+        async function loadCSV(filePath) {
+            const response = await fetch(filePath);
+            const data = await response.text();
+            return parseCSV(data);
+        }
+
+        function parseCSV(data) {
+            const rows = data.split('\n').map(row => row.split(','));
+            const headers = rows[0];
+            const parsedData = rows.slice(1).map(row => {
+                const obj = {};
+                headers.forEach((header, i) => {
+                    obj[header.trim()] = isNaN(row[i]) ? row[i] : parseFloat(row[i]);
+                });
+                return obj;
+            });
+            return parsedData;
+        }
+
+        function filterDataByRegion(region) {
+            if (region === "All") return allData;
+            const locationsInRegion = regionMapping[region] || [];
+            return allData.filter(row => locationsInRegion.includes(row.Location));
+        }
+
+        function destroyCharts() {
+            if (forecastChart) forecastChart.destroy();
+            if (historicalChart) historicalChart.destroy();
+            if (confidenceChart) confidenceChart.destroy();
+        }
+
+        function renderCharts(filteredData) {
+            const locations = filteredData.map(row => row.Location);
+            const prices = filteredData.map(row => row.Price);
+
+            const historicalPrices = prices.map(price => price * 0.9);
+            const predictedPrices = prices.map(price => price * 1.1);
+
+            const forecastCtx = document.getElementById('forecastChart').getContext('2d');
+            forecastChart = new Chart(forecastCtx, {
+                type: 'line',
+                data: {
+                    labels: locations,
+                    datasets: [{
+                        label: 'Predicted Price',
+                        data: predictedPrices,
+                        borderColor: '#1976d2',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+
+            const historicalCtx = document.getElementById('historicalChart').getContext('2d');
+            historicalChart = new Chart(historicalCtx, {
+                type: 'line',
+                data: {
+                    labels: locations,
+                    datasets: [{
+                        label: 'Historical Price',
+                        data: historicalPrices,
+                        borderColor: '#4caf50',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+
+            const confidenceLevels = {
+                High: prices.filter(price => price > 10000000).length,
+                Medium: prices.filter(price => price > 5000000 && price <= 10000000).length,
+                Low: prices.filter(price => price <= 5000000).length
+            };
+
+            const confidenceCtx = document.getElementById('confidenceChart').getContext('2d');
+            confidenceChart = new Chart(confidenceCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['High', 'Medium', 'Low'],
+                    datasets: [{
+                        label: 'Prediction Confidence',
+                        data: [confidenceLevels.High, confidenceLevels.Medium, confidenceLevels.Low],
+                        backgroundColor: ['#4caf50', '#ff9800', '#f44336']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+        }
+        function updateMetrics(filteredData) {
+    if (!filteredData.length) {
+        ['marketValue', 'localGrowth', 'inventoryLevels'].forEach(id => {
+            document.getElementById(id).textContent = 'N/A';
+        });
+        ['trendText', 'growthText', 'inventoryText'].forEach(id => {
+            document.getElementById(id).textContent = 'No data available';
+        });
+        return;
+    }
+
+    const prices = filteredData.map(row => row.Price).filter(price => !isNaN(price));
+    if (!prices.length) {
+        updateMetrics([]);
+        return;
+    }
+
+    const marketValue = Math.max(...prices);
+    document.getElementById('marketValue').textContent = ` ₹${marketValue.toLocaleString()}`;
+    document.getElementById('trendText').textContent = "3.5% increase predicted";
+    
+    document.getElementById('localGrowth').textContent = "+4.2%";
+    document.getElementById('growthText').textContent = "Strong growth";
+    
+    document.getElementById('inventoryLevels').textContent = "-12%";
+    document.getElementById('inventoryText').textContent = "Low inventory";
+}
+
+      function handleRegionChange(event) {
+            const selectedRegion = event.target.value;
+            const filteredData = filterDataByRegion(selectedRegion);
+
+            updateMetrics(filteredData);
+            destroyCharts();
+            renderCharts(filteredData);
+        }
+
+        async function initialize() {
+            allData = await loadCSV('Hyderabad.csv');
+            document.getElementById('regionFilter').addEventListener('change', handleRegionChange);
+
+            // Render all data initially
+            updateMetrics(allData);
+            renderCharts(allData);
+        }
+
+        initialize();
+
+</script>
+</body>
+</html>
+
