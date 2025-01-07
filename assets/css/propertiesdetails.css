@@ -523,7 +523,7 @@ body{
     .projectflex_details .property-card__cta-button{
       display: none;
     }
-    .property-card__cta-button{
+    .locationContainer .property-card__cta-button{
       position: fixed;
       width: 85%;
       top: 681px;

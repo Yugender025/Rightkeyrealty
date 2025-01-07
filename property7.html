@@ -14,6 +14,7 @@
     <link rel="stylesheet"  href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responive.css">
     <link rel="stylesheet" href="assets/css/propertiesdetails.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
@@ -42,11 +43,12 @@
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
+                    <div class="contact-us">
+                        <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+                      </div>
                 </ul>
             </div>
-            <div class="contact-us">
-                <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
-            </div>
+           
         </nav>
     </header>
     <div class="mainProjectcontainer">
@@ -69,7 +71,7 @@
             <div class="projectContainer">
                 <div class="imgsContainer">
                     <div class="mainImgcontainer">
-                        <img src="assets/images/jewelpark.jpeg" alt="" srcset="">
+                        <img src="assets/images/jewelpark.jpeg" alt="1" srcset="">
                     </div>
                     <div class="seeAllcontainer">
                         <p>See all</p>
@@ -81,11 +83,9 @@
                         <button class="close-btn">×</button>
                         <div class="carousel-container">
                             <div class="carousel" id="imageCarousel">
-                                <img src="assets/images/kapil-1.png" alt="Image 1">
-                                <img src="assets/images/kapil-1.png" alt="Image 2">
-                                <img src="assets/images/kapil-1.png" alt="Image 3">
-                                <img src="assets/images/kapil-1.png" alt="Image 4">
-                                <img src="assets/images/kapil-1.png" alt="Image 5">
+                                <img src="assets/images/jewelpark.jpeg" alt="Image 1"  onclick="openInNewTab(this.src)">
+                                <img src="assets/images/jewelpark.jpeg" alt="Image 2"  onclick="openInNewTab(this.src)">
+                                <img src="assets/images/jewelpark.jpeg" alt="Image 3"  onclick="openInNewTab(this.src)">
                             </div>
                             <button class="nav-btn prev-btn">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -109,18 +109,18 @@
                     </div>
                     <div class="secondaryImgs">
                         <div class="imgsecContainer">
-                            <img src="assets/images/jewelpark.jpeg" alt="" srcset="">
+                            <img src="assets/images/jewelpark.jpeg" alt="2" srcset="">
                         </div>
                         <div class="imgsecContainer">
-                            <img src="assets/images/jewelpark.jpeg" alt="" srcset="">
+                            <img src="assets/images/jewelpark.jpeg" alt="3" srcset="">
                         </div>
                     </div>
-                    <a href="" target="_blank" rel="noopener noreferrer">
-                        <div class="property-card__cta-button">
-                            <div class="property-card__cta-text">Request price</div>
-                            <div class="property-card__cta-icon"><i class="fa-regular fa-indian-rupee-sign"></i></div>
-                        </div>
-                    </a>
+                    
+                        <div class="property-card__cta-button" id="contactButton">
+                            <div class="property-card__cta-text">Request Price</div>
+                            <div class="property-card__cta-icon"><i class="fa-regular fa-arrow-right"></i></div>
+                         </div>
+                    
                 </div>
             </div>
         </div>
@@ -261,6 +261,57 @@
            </p>
         </div>
      </footer>
+     <div id="contactModal" class="modal_form">
+        <div class="form-card animate__animated animate__fadeIn">
+            <button class="close-btn" id="closeButton" aria-label="Close modal">×</button>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-content">
+                    <h2 class="form-title">
+                        <span>Get Job Ready for </span>
+                        <span>AWS Interviews</span>
+                    </h2>
+                    
+                    <div class="name-contact">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                            <div class="error-message">Please enter a valid mobile number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                        <div class="error-message">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <div class="spinner"></div>
+                        <span>Submit</span>
+                    </button>
+                </div>
+
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you for contacting us!</h3>
+                    <p>We'll get back to you shortly.</p>
+                </div>
+            </form>
+        </div>
+    </div>
 <script>
     // Function to update the content
 
@@ -450,6 +501,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="assets/js/properties.js"></script>
 <script src="assets/js/carousel.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/form.js"></script>
 </body>
 </html>    
 

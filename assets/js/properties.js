@@ -1,15 +1,15 @@
 const propertiesList = [
   {
     _id: 1,
-    title: "Mayoora",
+    title: "GR Mayoora",
     address:
       "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
-    category: "commercial",
+    category: "Residential",
     projectHighlights: {
       amenities:
         "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
       squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+        "The property offers a spacious area ranging between 1435 SFT to 1565 SFT",
       highlights: "East and west",
     },
     propertyLink: "property1.html",
@@ -21,13 +21,12 @@ const propertiesList = [
     _id: 2,
     title: "Kapil Business park",
     address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+      "sy.no.1/1 Plot no, CFC-1, opposite: HP petrol bunk, Airport Approach Road, Raviryal, Telangana 500069",
     category: "commercial",
     projectHighlights: {
       amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+        "Kapil Business Park, near Hyderabad's international airport, is Shamshabad's top commercial real estate project.",
+      squarefeet: "110,000 sq. ft. per floor",
       highlights: "East and west",
     },
     propertyLink: "property2.html",
@@ -38,15 +37,13 @@ const propertiesList = [
   {
     _id: 3,
     title: "VR Infra",
-    address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    address: "Krishanaja Hills, Bachupally, Medchal-Malkajgiri(Dist), T.S",
     category: "Residential",
     projectHighlights: {
       amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+        "VR Vikyath Iconia, ituated in the highly sought-after area near Krishnaja Hills, Bachupally, stands as a testament to the rapid growth",
+      squarefeet: "The property offers a spacious area ranging 1150SFT",
+      highlights: "EAST-WEST facing",
     },
     propertyLink: "property3.html",
     img1: "assets/images/vrinfra1.jpeg",
@@ -56,15 +53,14 @@ const propertiesList = [
   {
     _id: 4,
     title: "Urbanrise",
-    address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    address: "Survey No. 178 to 181, Ameenpur, Miyapur, Hyderabad, T.S 502032",
     category: "Residential",
     projectHighlights: {
       amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+        " This expansive 12.1-acre development features five high-rise towers, each soaring to 42 floors, providing residents",
       squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+        "The property offers a spacious area ranging between 2BHK 1100SFT - 1195SFT AND 3BHK 1435SFT - 1565SFT",
+      highlights: "EAST & WEST",
     },
     propertyLink: "property4.html",
     img1: "assets/images/urbanrise1.webp",
@@ -74,57 +70,53 @@ const propertiesList = [
   {
     _id: 5,
     title: "Myfair",
-    address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    address: "Kollur, Velimala, West Hyderabad, Hyderabad T.S",
     category: "Residential",
     projectHighlights: {
       amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+        "Greenmark Mayfair spans 63 acres with 2 blocks (A & B) offering spacious 2BHK (1100-1195 SFT) and 3BHK (1435-1565 SFT) units",
+      squarefeet: "2BHK: 1100-1195 SFT and 3BHK: 1435-1565 SFT",
+      highlights: "Available in East and West-facing options.",
     },
     propertyLink: "property5.html",
-    img1: "assets/images/Villa.jpg",
-    img2: "assets/images/Villa.jpg",
-    img3: "assets/images/Villa.jpg",
+    img1: "assets/images/myfair.png",
+    img2: "assets/images/myfair2.png",
+    img3: "assets/images/myfair3.png",
   },
   {
     _id: 6,
     title: "Hallmark",
-    address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+    address: "Velimela Rd, Velmala, Hyderabad, Telangana 502300",
     category: "Residental",
     projectHighlights: {
       amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
+        "Hallmark 5A is spread across 5.35 acres, offering spacious 3BHK units (1435-1565 SFT) with G+5 floors and cellar parking. ",
+      squarefeet: "3BHK: 1435-1565 SFT",
+      highlights: "Available in East and West-facing options.",
     },
     propertyLink: "property6.html",
     img1: "assets/images/Asset 1.png",
     img2: "assets/images/Asset 2.png",
     img3: "assets/images/Asset 3.png",
   },
-  {
-    _id: 7,
-    title: "Jewel park",
-    address:
-      "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
-    category: "Residential",
-    projectHighlights: {
-      amenities:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      squarefeet:
-        "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-      highlights: "GR Mayoora, nestled in the highly sought-after",
-    },
-    propertyLink: "property7.html",
-    img1: "assets/images/jewelpark.jpeg",
-    img2: "assets/images/jewelpark.jpeg",
-    img3: "assets/images/jewelpark.jpeg",
-  },
+  // {
+  //   _id: 7,
+  //   title: "Jewel park",
+  //   address:
+  //     "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
+  //   category: "Residential",
+  //   projectHighlights: {
+  //     amenities:
+  //       "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+  //     squarefeet:
+  //       "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
+  //     highlights: "GR Mayoora, nestled in the highly sought-after",
+  //   },
+  //   propertyLink: "property7.html",
+  //   img1: "assets/images/jewelpark.jpeg",
+  //   img2: "assets/images/jewelpark.jpeg",
+  //   img3: "assets/images/jewelpark.jpeg",
+  // },
 ];
 
 function createPropertylist(products) {
@@ -172,7 +164,7 @@ function createPropertylist(products) {
                               <div 
                                   class="property-card__highlight-tab-icon" 
                                   data-property-id="${products._id}"
-                                  data-title="Amenities" 
+                                  data-title="Overview" 
                                   data-description="${
                                     products.projectHighlights.amenities ||
                                     "N/A"

@@ -14,6 +14,7 @@
     <link rel="stylesheet"  href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responive.css">
     <link rel="stylesheet" href="assets/css/propertiesdetails.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
@@ -28,9 +29,11 @@
 <body>
     <header>
         <nav>
-            <div class="hero_section">
-                <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
-            </div>
+            <a href="index.html">
+                <div class="hero_section">
+                    <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
+                </div>
+           </a> 
             <button class="hamburger" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -42,11 +45,13 @@
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
+                    <div class="contact-us">
+                        <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+                      </div>
                 </ul>
+
             </div>
-            <div class="contact-us">
-                <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
-            </div>
+           
         </nav>
     </header>
     <div class="mainProjectcontainer">
@@ -69,7 +74,7 @@
             <div class="projectContainer">
                 <div class="imgsContainer">
                     <div class="mainImgcontainer">
-                        <img src="assets/images/Asset 1.png" alt="" srcset="">
+                        <img src="assets/images/myfair.png" alt="" srcset="">
                     </div>
                     <div class="seeAllcontainer">
                         <p>See all</p>
@@ -81,11 +86,17 @@
                         <button class="close-btn">×</button>
                         <div class="carousel-container">
                             <div class="carousel" id="imageCarousel">
-                                <img src="assets/images/kapil-1.png" alt="Image 1">
-                                <img src="assets/images/kapil-1.png" alt="Image 2">
-                                <img src="assets/images/kapil-1.png" alt="Image 3">
-                                <img src="assets/images/kapil-1.png" alt="Image 4">
-                                <img src="assets/images/kapil-1.png" alt="Image 5">
+                                <img src="assets/images/myfair.png" alt="Image 1" onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfair2.png" alt="Image 2"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfair3.png" alt="Image 3"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfaircafe.png" alt="Image 4"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairchild2.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairchildren.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairclub.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairclub2.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairfloorplan.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairfloorplan1.png" alt="Image 5"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/myfairgym.png" alt="Image 5"onclick="openInNewTab(this.src)">
                             </div>
                             <button class="nav-btn prev-btn">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -112,11 +123,11 @@
                             <img src="assets/images/myfair2.png" alt="" srcset="">
                         </div>
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-3.jpg" alt="" srcset="">
+                            <img src="assets/images/myfair3.png" alt="" srcset="">
                         </div>
                     </div>
-                    <div class="property-card__cta-button">
-                        <div class="property-card__cta-text">Contact</div>
+                    <div class="property-card__cta-button" id="contactButton">
+                        <div class="property-card__cta-text">Request Price</div>
                         <div class="property-card__cta-icon"><i class="fa-regular fa-arrow-right"></i></div>
                      </div>
                 </div>
@@ -259,6 +270,57 @@
            </p>
         </div>
      </footer>
+     <div id="contactModal" class="modal_form">
+        <div class="form-card animate__animated animate__fadeIn">
+            <button class="close-btn" id="closeButton" aria-label="Close modal">×</button>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-content">
+                    <h2 class="form-title">
+                        <span>Get Job Ready for </span>
+                        <span>AWS Interviews</span>
+                    </h2>
+                    
+                    <div class="name-contact">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                            <div class="error-message">Please enter a valid mobile number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                        <div class="error-message">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <div class="spinner"></div>
+                        <span>Submit</span>
+                    </button>
+                </div>
+
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you for contacting us!</h3>
+                    <p>We'll get back to you shortly.</p>
+                </div>
+            </form>
+        </div>
+    </div>
 <script>
     // Function to update the content
 
@@ -347,14 +409,14 @@
                             </div> 
                         </div>
                     </div>`,
-        'Location': `<div class="Location_highlightscontainer">
+                    'Location': `<div class="Location_highlightscontainer">
                         <div class="flex-row">
                             <div class="imgContainerLocation">
                                 <img src="https://cdn-icons-png.freepik.com/256/8074/8074788.png?semt=ais_hybrid" alt="schools" srcset="">
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SCHOOLS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Gaudium & Samashti Schools, Samasthi School, Birla Open Minds.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -363,7 +425,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY COLLEGES</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Narayana IIT Academy, Resonance, Manjeera Junior College.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -372,7 +434,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY HOSPITALS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Citizen Nallagandla, Continental Nanakramguda, AIG Kondapur.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -381,7 +443,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SUPERMARKETS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Aparna Mall, Nallagandlal, Inorbit, D-mark.</p>
                             </div>
                         </div>
                     </div>`,
@@ -392,7 +454,9 @@
                 for flora and fauna, with trees, shrubs, and 
                 flowers that attract birds and butterflies. We believe that by creating 
                 a harmonious ecosystem, we are not only doing good for our residents, but also for our 
-                planet. Living in our communities offers a tranquil environment that promotes a healthy 
+                planet. 
+                <br><br>
+                Living in our communities offers a tranquil environment that promotes a healthy 
                 lifestyle, whether you are relaxing at home, taking a stroll in the park, or an exploratory trip across the community. 
                 We are committed to building a sustainable future, one home at a time, and we invite you to join us on this journey towards a greener tomorrow. 
                 Come experience the beauty of sustainable living with Mayfair Sunrise.
@@ -450,7 +514,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="assets/js/properties.js"></script>
 <script src="assets/js/carousel.js"></script>
-
+<script src="assets/js/script.js"></script>
+<script src="assets/js/form.js"></script>
 </body>
 </html>    
 

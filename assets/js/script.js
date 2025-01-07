@@ -16,3 +16,23 @@ fileInput.addEventListener("change", () => {
 btnAddFile.addEventListener("click", () => {
   fileInput.click();
 });
+
+//opennewtab
+
+function openInNewTab(imgSrc) {
+  window.open(imgSrc, "_blank");
+}
+
+// Optional: Add keyboard accessibility
+document.querySelectorAll(".carousel img").forEach((img) => {
+  img.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      openInNewTab(img.src);
+    }
+  });
+  img.setAttribute("tabindex", "0");
+  img.setAttribute("role", "button");
+  img.setAttribute("aria-label", `Open ${img.alt} in new tab`);
+});
+
+//pop-up form

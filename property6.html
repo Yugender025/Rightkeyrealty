@@ -14,6 +14,7 @@
     <link rel="stylesheet"  href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responive.css">
     <link rel="stylesheet" href="assets/css/propertiesdetails.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
@@ -28,9 +29,11 @@
 <body>
     <header>
         <nav>
-            <div class="hero_section">
-                <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
-            </div>
+            <a href="index.html">
+                <div class="hero_section">
+                    <img src="assets/images/company-logo.png" width="140" height="60" alt="Rightkeyrealty">
+                </div>
+           </a> 
             <button class="hamburger" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -42,11 +45,12 @@
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
+                    <div class="contact-us">
+                        <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+                      </div>
                 </ul>
             </div>
-            <div class="contact-us">
-                <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
-            </div>
+            
         </nav>
     </header>
     <div class="mainProjectcontainer">
@@ -55,7 +59,7 @@
                 <div id="map-container" style="width: 100%; height: 400px; border-radius: 12px; margin-bottom: 2rem;">
                     <iframe 
                     style="width: 100%; height: 100%; border-radius: 12px; border: none;" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.1821141656133!2d78.2082389585649!3d17.489991457565687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbed1cc70d743f%3A0xfc783af85a9be42c!2sMayfair%20Sunrise!5e1!3m2!1sen!2sin!4v1735647254530!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1626.887636508702!2d78.23628145479165!3d17.47964210829803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbed20da34e3ad%3A0xf72d8bc346c02613!2sHallmark%205A%20Villas!5e1!3m2!1sen!2sin!4v1736243751792!5m2!1sen!2sin" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
@@ -81,11 +85,12 @@
                         <button class="close-btn">×</button>
                         <div class="carousel-container">
                             <div class="carousel" id="imageCarousel">
-                                <img src="assets/images/kapil-1.png" alt="Image 1">
-                                <img src="assets/images/kapil-1.png" alt="Image 2">
-                                <img src="assets/images/kapil-1.png" alt="Image 3">
-                                <img src="assets/images/kapil-1.png" alt="Image 4">
-                                <img src="assets/images/kapil-1.png" alt="Image 5">
+                                <img src="assets/images/Asset 1.png" alt="Image 1" onclick="openInNewTab(this.src)">
+                                <img src="assets/images/Asset 2.png" alt="Image 2"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/Asset 3.png" alt="Image 3"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/Asset 4.png" alt="Image 4"onclick="openInNewTab(this.src)">
+                                <img src="assets/images/Asset 5.png" alt="Image 4"onclick="openInNewTab(this.src)">
+                                
                             </div>
                             <button class="nav-btn prev-btn">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -102,21 +107,21 @@
                 </div>
                 <div class="projectInfoContainer">
                     <div class="infoHeadercontainer">
-                        <h3>Greenmark Mayfair</h3>
+                        <h3>Hallmark 5A</h3>
                         <p class="descrp">
-                            Kollur, Velimala, West Hyderabad, Hyderabad T.S
+                            Velimela Rd, Velmala, Hyderabad, Telangana 502300
                         </p>
                     </div>
                     <div class="secondaryImgs">
                         <div class="imgsecContainer">
-                            <img src="assets/images/myfair2.png" alt="" srcset="">
+                            <img src="assets/images/Asset 2.png" alt="1" srcset="">
                         </div>
                         <div class="imgsecContainer">
-                            <img src="https://rightkeyrealty.in/images/mayoora-3.jpg" alt="" srcset="">
+                            <img src="assets/images/Asset 3.png" alt="2" srcset="">
                         </div>
                     </div>
-                    <div class="property-card__cta-button">
-                        <div class="property-card__cta-text">Contact</div>
+                    <div class="property-card__cta-button" id="contactButton">
+                        <div class="property-card__cta-text">Request Price</div>
                         <div class="property-card__cta-icon"><i class="fa-regular fa-arrow-right"></i></div>
                      </div>
                 </div>
@@ -125,7 +130,7 @@
         <div class="projectdetails_Container">
             <div class="projectheader_Container">
                 <div class="main_headerContainer">
-                    <h2>Greenmark Mayfair Sunrise Kollur, Velimala, Hyderabad T.S</h2>
+                    <h2>Hallmark 5A Velimala, West Hyderabad, Hyderabad T.S</h2>
                      <div class="property-card__share-section">
                             <div class="property-card__share-text">Share</div>
                             <div id="share-button" class="property-card__share-icon"><i style="cursor:pointer;" class="fa-light fa-share-nodes"></i></div>
@@ -133,7 +138,7 @@
                 </div>
                 <div class="caption_headerContainer">
                     <h3 class="highlight">Ready to move in 2&3 BHK Gated Community Apartments </h3>
-                    <p>Luxury Living at GR Mayoora</p>
+                    <p>Luxury Living at Hallmark</p>
                 </div>
             </div>
             <hr style="margin-top: 0.8rem;">
@@ -259,6 +264,57 @@
            </p>
         </div>
      </footer>
+     <div id="contactModal" class="modal_form">
+        <div class="form-card animate__animated animate__fadeIn">
+            <button class="close-btn" id="closeButton" aria-label="Close modal">×</button>
+            
+            <form id="contactForm" novalidate>
+                <div class="form-content">
+                    <h2 class="form-title">
+                        <span>Get Job Ready for </span>
+                        <span>AWS Interviews</span>
+                    </h2>
+                    
+                    <div class="name-contact">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                            <div class="error-message">Please enter a valid mobile number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                        <div class="error-message">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <div class="spinner"></div>
+                        <span>Submit</span>
+                    </button>
+                </div>
+
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you for contacting us!</h3>
+                    <p>We'll get back to you shortly.</p>
+                </div>
+            </form>
+        </div>
+    </div>
 <script>
     // Function to update the content
 
@@ -267,19 +323,11 @@
         'Overview': `      <div class="overview_flex-col">
                                 <div class="flex-row">
                                     <h4>Project Name</h4>
-                                    <p>Greenmark Mayfair</p>
+                                    <p>Hallmark 5A</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Total AREA </h4>
-                                    <p>63 ACERS</p>
-                                </div>
-                                <div class="flex-row">
-                                    <h4>Total Blocks</h4>
-                                    <p>2 BLOCKS(A & B)</p>
-                                </div>
-                                <div class="flex-row">
-                                    <h4>2 BHK Size</h4>
-                                    <p>1100SFT - 1195SFT</p>
+                                    <p>5.35 ACRES</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>3 BHK Size</h4>
@@ -295,11 +343,11 @@
                                 </div>
                                 <div class="flex-row">
                                     <h4>Possesion</h4>
-                                    <p>Ready to moveA</p>
+                                    <p>Ready to move in</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Club House</h4>
-                                    <p>4000SFT,G+4 WITH ALL AMENITES</p>
+                                    <p>7.2K sq.ft,G+2 WITH ALL AMENITES</p>
                                 </div>
                                 <div class="flex-row">
                                     <h4>Loan Facility</h4>
@@ -354,7 +402,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SCHOOLS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Gaudium & Samashti Schools, Samasthi School, Birla Open Minds.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -363,7 +411,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY COLLEGES</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Narayana IIT Academy, Resonance, Manjeera Junior College.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -372,7 +420,7 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY HOSPITALS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Citizen Nallagandla, Continental Nanakramguda, AIG Kondapur.</p>
                             </div>
                         </div>
                         <div class="flex-row">
@@ -381,21 +429,15 @@
                             </div>                        
                             <div class="flex-cl">
                                 <h4>NEAR BY SUPERMARKETS</h4>
-                                <p>DRS International School, Sunflower Vedic School, Neeraj International School.</p>
+                                <p>Aparna Mall, Nallagandlal, Inorbit, D-mark.</p>
                             </div>
                         </div>
                     </div>`,
         'About': `
             <p id="about">
-                At Mayfair Sunrise, we take pride in our connection to nature, which is amply 
-                evident in our carefully designed green spaces. Our landscapes provide a haven 
-                for flora and fauna, with trees, shrubs, and 
-                flowers that attract birds and butterflies. We believe that by creating 
-                a harmonious ecosystem, we are not only doing good for our residents, but also for our 
-                planet. Living in our communities offers a tranquil environment that promotes a healthy 
-                lifestyle, whether you are relaxing at home, taking a stroll in the park, or an exploratory trip across the community. 
-                We are committed to building a sustainable future, one home at a time, and we invite you to join us on this journey towards a greener tomorrow. 
-                Come experience the beauty of sustainable living with Mayfair Sunrise.
+                Hallmark introduced a new launch villa project Hallmark 5A at Velimela, Kollur. The project offers well-designed G+2 villas with ultra-modern facilities inclusive of world class clubhouse . The project is spread over 5.35 Acres . Hallmark 5A offers some of the most exclusive 3 BHK, 4 BHK Morden Villas with an abundance of amenities and facilities. Make splendor the highlight of your life, living in a world that’s a cusp of past and present. Live a royale life and soak in every moment of its radiance.
+             <br><br>
+             The project is RERA compliant and fulfils all necessities as required by the authorities. RERA ID of Hallmark 5A is P01100004115.
             </p>
         `,
         'Contact': '<p>Get in touch with us for more information or inquiries.</p>'
@@ -451,6 +493,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script src="assets/js/properties.js"></script>
 <script src="assets/js/carousel.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/form.js"></script>
 </body>
 </html>    
 
