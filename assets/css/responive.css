@@ -906,4 +906,238 @@
     }
 }
 
-/*------------Testimonal containers---------------*/
+/*------------our serverices---------------*/
+/* Large Devices (Desktops) */
+@media screen and (max-width: 1200px) {
+    .services_stepsInnerContainer {
+        gap: 5rem;
+    }
+    
+    .channelpartner_innerContainer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .channel_innerContainer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .joining_program .program_headerContainer {
+        padding: 40px 80px;
+    }
+
+    .services_infoMaincontainer {
+        gap: 1.5rem;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 992px) {
+    .services_secondInnercontinaer {
+        padding: 8px 30px 30px 30px;
+        flex-direction: column;
+    }
+    
+    .services_stepsInnerContainer {
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    
+    .projectmanagement_mainContainer {
+        padding: 1rem 2rem;
+    }
+    
+    .projectmanagement_mainContainer .projectmanagement_innerContainer {
+        flex-direction: column;
+    }
+    
+    .channel_innerContainer .channel_pro {
+        gap: 3rem;
+        flex-direction: column;
+    }
+    
+    .channel_pro .col-6 {
+        width: 100%;
+    }
+    
+    .channelptnr_provide {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .whychoose_container {
+        gap: 1.5rem;
+    }
+
+    .channel_innerDescriptioncontainer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .channel_imgContainer {
+        max-width: 100%;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media screen and (max-width: 768px) {
+    .services_innerContainer {
+        padding-top: 10rem;
+    }
+    
+    .services_mainHeader .services_header h2 {
+        max-width: 400px;
+    }
+    
+    .chaneel_descriptionContinaer {
+        flex-direction: column;
+    }
+    
+    .channel_whyChoose {
+        padding: 20px 30px;
+    }
+    
+    .joining_program .program_headerContainer {
+        padding: 30px 40px;
+    }
+    
+    .program_joiningCntct .container .left_group {
+        flex-direction: column;
+    }
+
+    .channelptnr_mainContainer {
+        padding: 1em 1.5em;
+    }
+
+    .projectmanagement_headerContinaer {
+        align-items: center;
+        text-align: center;
+    }
+
+    form#representative-form {
+        width: 100%;
+    }
+
+    .rect_services {
+        margin: 1rem 0;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media screen and (max-width: 576px) {
+    .services_innerContainer {
+        padding-top: 8rem;
+    }
+    
+    .services_stepsInnerContainer {
+        gap: 2rem;
+    }
+    
+    .steps .step1_img,
+    .steps .step2_img,
+    .steps .step3_img,
+    .steps .step4_img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .projectmanagement_headerContinaer {
+        gap: 1rem;
+    }
+    
+    .channel_innerContainer .channel {
+        padding: 20px 30px;
+    }
+    
+    .joining_program {
+        padding: 1rem;
+    }
+    
+    .program_joiningCntct .container {
+        padding: 1rem;
+    }
+
+    .services_propertyInnercontainer {
+        gap: 5rem;
+    }
+
+    .channel_maincontainer {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .program_joiningCntct input,
+    .program_joiningCntct textarea {
+        padding: 0.5rem;
+    }
+
+    .img_containerHeader {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Height-based media queries for better vertical responsiveness */
+@media screen and (max-height: 800px) {
+    .services_mainSectionbanner {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .servives_property {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .services_propertyInnercontainer {
+        gap: 5rem;
+        padding: 2rem 0;
+    }
+
+    .channel_maincontainer {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+    .services_mainSectionbanner {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .services_innerContainer {
+        padding-top: 5rem;
+    }
+    
+    .services_stepsInnerContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .channel_maincontainer {
+        height: auto;
+        min-height: 100vh;
+        background-attachment: scroll;
+    }
+
+    .services_mainSectionbanner {
+        background-attachment: scroll;
+    }
+}
+
+/* Print Media Query */
+@media print {
+    .services_mainSectionbanner,
+    .channel_maincontainer {
+        background-image: none;
+    }
+    
+    .program_joiningCntct .btn-add-file,
+    .program_joiningCntct .btn-submit {
+        display: none;
+    }
+}
