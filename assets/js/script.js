@@ -36,3 +36,5 @@ document.querySelectorAll(".carousel img").forEach((img) => {
 });
 
 //pop-up form
+
+//news container
