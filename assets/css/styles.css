@@ -510,8 +510,8 @@ nav .hero_section img {
 
 }
 .who_Company .box{
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
 }
 .boxes_aboutsection{
     position: relative;
@@ -1469,71 +1469,126 @@ rgb(0, 0, 0) 100%
     margin-bottom: 2rem;
   }
   
-  .program_joiningCntct .form-group {
-    margin-bottom: 1.5rem;
-    width: 100%;
-  }
-  
-  .program_joiningCntct label {
+  /* Form Title Styles */
+.form-title {
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.form-title span:first-child {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.form-title span:last-child {
+    font-weight: 600;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: var(--spacing-md);
+    position: relative;
+}
+
+.name-contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  .program_joiningCntct input,
-  textarea {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+input,
+textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .program_joiningCntct textarea {
-    resize: vertical;
-    min-height: 100px;
-  }
-  
-  .program_joiningCntct .file-input {
-    display: flex;
-    align-items: center;
-  }
-  form#representative-form {
-    display: flex
-;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
 }
-  .program_joiningCntct .file-name {
-    flex-grow: 1;
-    margin-right: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .program_joiningCntct .container .left_group{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap:2rem;
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(12, 96, 152, 0.1);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.error-message {
+    display: none;
+    color: var(--error-color);
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: var(--error-color);
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+/* Button Styles */
+.submit-btn {
     width: 100%;
-  }
-  .program_joiningCntct .btn-add-file,
-  .btn-submit {
-    background-color: #007bff;
-    color: #fff;
+    padding: 0.75rem;
+    background: var(--primary-color);
+    color: white;
     border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 500;
     cursor: pointer;
-  }
-  
-  .program_joiningCntct .btn-add-file:hover,
-  .btn-submit:hover {
-    background-color: #0056b3;
-  }
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background-color: #085180;
+}
+
+.submit-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+
+.submit-btn .spinner {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.submit-btn.loading .spinner {
+    display: block;
+}
+
+.submit-btn.loading span {
+    visibility: hidden;
+}
+
   
   /* Responsive styles */
   @media (max-width: 768px) {

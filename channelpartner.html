@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/carousel.scss">
     <link rel="stylesheet" href="assets/css/responive.css">
-    <link rel="stylesheet" href="assets/css/responive.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css" >
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css" >
@@ -37,7 +37,7 @@
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
-                    <div class="contact-us">
+                    <div class="contact-us" id="contactButtons">
                         <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
                       </div>
                 </ul>
@@ -173,36 +173,56 @@
             </div>
             <div class="program_joiningCntct">
                 <div class="container">
-                    <h1>Representative Information</h1>
-                    <form id="representative-form" action="submit.php" method="post" enctype="multipart/form-data">
-                    <div class="left_group">   
-                            <div class="form-group">
-                                <label for="representative-name">Representative Name</label>
-                                <input type="text" id="representative-name" name="representative-name" placeholder="Enter Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company-name">Company Name</label>
-                                <input type="text" id="company-name" name="company-name" placeholder="Enter Name" required>
-                            </div>
-                    </div>
-                    <div class="left_group">   
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Enter Email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="mobile-number">Mobile Number</label>
-                                <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter Number" required>
-                            </div>
-                    </div>
-                    <div class="left_group flex-col">    
-                            <div class="form-group">
-                                <label for="address">Address</label>
-                                <textarea id="address" name="address" placeholder="Type your message here" required></textarea>
+                    
+                    <form id="enrollmentForm" method="post" autocomplete="off" name="google-sheet">
+                        <div class="form-content">
+                            <h2 class="form-title">
+                                <span>Representative form for</span>
+                                <span>Channel partners</span>
+                            </h2>
+                            
+                            <div class="name-contact">
+                                <div class="form-group">
+                                    <label for="name" id="nameLabel">Full Name</label>
+                                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                                    <div class="error-message">Please enter your name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" id="cnameLabel">Comapany Name</label>
+                                    <input type="text" id="cname" name="companyname" required placeholder="Company name">
+                                    <div class="error-message">Please enter company name</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="mobile" id="mobileLabel">Mobile Number</label>
+                                    <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                                    <div class="error-message">Please enter a valid mobile number</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"id="emailLabel">Email Address</label>
+                                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                                    <div class="error-message">Please enter a valid email address</div>
+                                </div>
                             </div>
                             
-                    </div>             
-                    <button type="submit" class="btn-submit">Submit</button>
+                           
+                            
+                            <div class="form-group">
+                                <label for="message"  id="messageLabel">Your Message</label>
+                                <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                                <div class="error-message">Please enter your message</div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <div class="spinner"></div>
+                                <span>Submit</span>
+                            </button>
+                        </div>
+        
+                        <div class="success-message">
+                            <div class="success-icon">✓</div>
+                            <h3>Thank you for contacting us!</h3>
+                            <p>We'll get back to you shortly.</p>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -265,7 +285,60 @@
            </p>
         </div>
      </footer>
+     <div id="contactModal" class="modal_form">
+        <div class="form-card animate__animated animate__fadeIn">
+            <button class="close-btn" id="closeButton" aria-label="Close modal">×</button>
+            
+            <form id="enrollmentForm" method="post" autocomplete="off" name="google-sheet">
+                <div class="form-content">
+                    <h2 class="form-title">
+                        <span>Get ready to list</span>
+                        <span>your property</span>
+                    </h2>
+                    
+                    <div class="name-contact">
+                        <div class="form-group">
+                            <label for="name" id="nameLabel">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="error-message">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile" id="mobileLabel">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" required placeholder="Enter your mobile number">
+                            <div class="error-message">Please enter a valid mobile number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"id="emailLabel">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        <div class="error-message">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"  id="messageLabel">Your Message</label>
+                        <textarea id="message" name="message" required placeholder="Please include your current profession or role and any specific questions you have"></textarea>
+                        <div class="error-message">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <div class="spinner"></div>
+                        <span>Submit</span>
+                    </button>
+                </div>
+    
+                <div class="success-message">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank you for contacting us!</h3>
+                    <p>We'll get back to you shortly.</p>
+                </div>
+            </form>
+        </div>
+    </div> 
      <script src="assets/js/script.js"></script>
      <script src="assets/js/navbar.js"></script>
+     <script src="assets/js/channelpartner.js"></script>
+     <script src="assets/js/form.js"></script>
 </body>
 </html>

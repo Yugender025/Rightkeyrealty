@@ -828,7 +828,11 @@
         height: 300px;
     }
     .section_banner{
-        height: 85vh;
+        height: 85vh !important;
+    }
+    .heading{
+        padding-left: 0.8rem;
+    padding-right: 0.8rem;
     }
     .properties {
         flex: 0 0 140px;
