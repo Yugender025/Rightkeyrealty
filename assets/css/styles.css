@@ -145,6 +145,11 @@
     padding: 0;
     top: 0;
     font-family: "Helvetica Neue", Helvetica;
+    text-decoration: none;
+   
+}
+a{
+    color: inherit;
 }
 .fa-brands{
     color: white;

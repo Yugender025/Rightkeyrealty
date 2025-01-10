@@ -641,7 +641,7 @@
     }
   
     .property-card__location-section {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
       
     }
@@ -664,7 +664,7 @@
   
     .property-card__description-section {
     
-      align-items: center;
+      align-items: flex-start;
     }
   }
   

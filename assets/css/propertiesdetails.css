@@ -682,7 +682,7 @@ body{
     font-size: 24px;
     cursor: pointer;
     color: #666;
-    opacity: 0;
+    /* opacity: 0; */
     transform: rotate(-180deg);
     transition: all 0.3s ease;
 }
