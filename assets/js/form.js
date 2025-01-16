@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("contactModal");
   const contactButton = document.getElementById("contactButton");
   const closeButton = document.getElementById("closeButton");
-  const navBtn = document.getElementById("contactButtons");
 
   // Form fields
   const fields = {
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Event listeners
-  navBtn.addEventListener("click", openModal);
+
   contactButton.addEventListener("click", openModal);
 
   closeButton.addEventListener("click", closeModal);
