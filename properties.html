@@ -54,22 +54,23 @@
         <div class="inner_containerprop">
             <div class="hero-content">
                 <div class="filter-options">
-                  <button class="filter-btn active">All</button>
-                  <button class="filter-btn">Residential</button>
-                  <button class="filter-btn">Commercial</button>
+                  <button class="filter-btn active" data-category="all">All</button>
+                 
+                  <button class="filter-btn" data-category="Residential">Residential</button>
+                  <button class="filter-btn" data-category="Commercial">Commercial</button>
                   <button style="display: none;" class="filter-btn">Open plots</button>
                 </div>
                 <div class="search-bar">
                   <input type="text" placeholder="Search your Dream" />
                   <div class="sort-filter">
                     <button class="sort-btn">Sort <span class="sort-icon"><i class="fa-light fa-arrow-up-arrow-down"></i></span></button>
-                    <button class="filter-btn">Filter <span class="filter-icon"><i class="fa-light fa-filter-list"></i></span></button>
+                    <button disabled class="filter-btn">Filter <span class="filter-icon"><i class="fa-light fa-filter-list"></i></span></button>
                   </div>
                 </div>
               </div>
         </div>
     </div>
-    <div class="properties_list">
+    <div class="properties_list" id="propertiesgrid">
  
     </div>
     <footer>

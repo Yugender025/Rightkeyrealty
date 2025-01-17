@@ -22,7 +22,7 @@ const propertiesList = [
     title: "Kapil Business park",
     address:
       "sy.no.1/1 Plot no, CFC-1, opposite: HP petrol bunk, Airport Approach Road, Raviryal, Telangana 500069",
-    category: "commercial",
+    category: "Commercial",
     projectHighlights: {
       amenities:
         "Kapil Business Park, near Hyderabad's international airport, is Shamshabad's top commercial real estate project.",
@@ -220,6 +220,104 @@ function createPropertylist(products) {
             </div>
   `;
 }
+
+function filterProperty(category) {
+  const propertyGrid = document.getElementById("propertiesgrid");
+  propertyGrid.innerHTML = "";
+
+  const filteredProperties =
+    category === "all"
+      ? propertiesList
+      : propertiesList.filter((products) => products.category === category);
+
+  filteredProperties.forEach((products) => {
+    propertyGrid.innerHTML += createPropertylist(products);
+  });
+}
+// Add click event listeners to filter buttons
+document.querySelectorAll(".filter-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    // Update active button
+    document.querySelector(".filter-btn.active").classList.remove("active");
+    button.classList.add("active");
+
+    // Filter posts
+    filterProperty(button.dataset.category);
+  });
+});
+
+// //search functionality
+// // Get the search input element
+// const searchInput = document.querySelector(".search-bar input");
+
+// // Function to filter properties based on search input
+// function searchProperties(searchTerm) {
+//   const propertyGrid = document.getElementById("propertiesgrid");
+//   searchTerm = searchTerm.toLowerCase().trim();
+
+//   // If search is empty, show all properties
+//   if (searchTerm === "") {
+//     propertyGrid.innerHTML = "";
+//     propertiesList.forEach((property) => {
+//       propertyGrid.innerHTML += createPropertylist(property);
+//     });
+//     return;
+//   }
+
+//   // Filter properties based on search criteria
+//   const filteredProperties = propertiesList.filter((property) => {
+//     return (
+//       // Search in title
+//       property.title.toLowerCase().includes(searchTerm) ||
+//       // Search in address
+//       property.address.toLowerCase().includes(searchTerm) ||
+//       // Search in amenities
+//       property.projectHighlights.amenities.toLowerCase().includes(searchTerm) ||
+//       // Search in square feet
+//       property.projectHighlights.squarefeet
+//         .toLowerCase()
+//         .includes(searchTerm) ||
+//       // Search in highlights
+//       property.projectHighlights.highlights.toLowerCase().includes(searchTerm)
+//     );
+//   });
+
+//   // Update the display with filtered results
+//   propertyGrid.innerHTML = "";
+//   if (filteredProperties.length > 0) {
+//     filteredProperties.forEach((property) => {
+//       propertyGrid.innerHTML += createPropertylist(property);
+//     });
+//   } else {
+//     propertyGrid.innerHTML = `
+//       <div class="no-results">
+//         <h3>No properties found matching "${searchTerm}"</h3>
+//         <p>Try different search terms or browse all properties.</p>
+//       </div>
+//     `;
+//   }
+// }
+
+// // Add event listener for real-time search with debounce
+// searchInput.addEventListener(
+//   "input",
+//   debounce((e) => {
+//     searchProperties(e.target.value);
+//   }, 300)
+// );
+
+// // Debounce function to prevent excessive updates during search
+// function debounce(func, wait) {
+//   let timeout;
+//   return function executedFunction(...args) {
+//     const later = () => {
+//       clearTimeout(timeout);
+//       func(...args);
+//     };
+//     clearTimeout(timeout);
+//     timeout = setTimeout(later, wait);
+//   };
+// }
 
 function showHighlight(tabElement) {
   // Get the property ID and details from data attributes

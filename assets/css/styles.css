@@ -388,7 +388,7 @@ nav .hero_section img {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    z-index: -1;
+    /* z-index: -1; */
     padding-top: 3rem;
 }
 .banner_content {
@@ -599,7 +599,10 @@ nav .hero_section img {
 .testimonal_innerContainer {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -691,8 +694,10 @@ nav .hero_section img {
 }
 @media screen and (max-width: 1400px) {
     .testimonal_innerContainer {
-        padding: 40px 30px;
-        gap: 3rem;
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-bottom: 40px;
+        gap: 1rem;
     }
 
     .testimonal_secondContainer {
@@ -838,14 +843,34 @@ nav .hero_section img {
     justify-content: center;
   }
 
-  .slide img {
+  /* .slide img {
     width: 160px;
     height: 80px;
     object-fit: contain;
     
     transition: opacity 0.3s ease;
+  } */
+  .slide img {
+    object-fit: cover;
+    transition: opacity 0.3s ease;
   }
-
+  
+  .slide img[src*="client2"],
+  .slide img[src*="client3"],
+  .slide img[src*="client4"],
+  .slide img[src*="client5"],
+  .slide img[src*="client6"] {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .slide img[src*="client1"],
+  .slide img[src*="client7"],
+  .slide img[src*="client8"],
+  .slide img[src*="client9"] {
+    width: 150px;
+    height: 150px;
+  }
   .slide img:hover {
     opacity: 1;
   }
@@ -1016,7 +1041,7 @@ nav .hero_section img {
  /* Team Section Main Styles */
  .team_mainContainer {
     width: 100%;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     background-color: #f8f9fa;
     
 }
@@ -1154,13 +1179,11 @@ nav .hero_section img {
 
 @media (max-width: 768px) {
     .team_mainContainer {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         overflow: hidden;
     }
     
-    .team_innerHeaderContainer h2 {
-        font-size: 2rem;
-    }
+   
     
     .team_carouselContainer {
         padding: 0 20px;
@@ -1173,9 +1196,7 @@ nav .hero_section img {
         min-width: 100%;
     }
     
-    .team_mainHeaderContainer p {
-        font-size: 1rem;
-    }
+ 
     
     .team_nav_buttons {
         gap: 0.5rem;
