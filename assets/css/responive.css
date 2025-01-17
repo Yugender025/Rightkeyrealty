@@ -277,6 +277,7 @@
     .contact-us .btn{
         background: none;
         padding: 0;
+        font-size: 20px;
     }
     .contact-us .btn i{
         display: none;
@@ -533,7 +534,7 @@
 }
 @media screen and (max-width: 768px) {
     .channel_pro .col-6:nth-child(2) .channel_imgContainer {
-        height: 115px;
+        height: 189px;
     }
 }
 /* Form responsiveness */
