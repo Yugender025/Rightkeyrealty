@@ -1267,15 +1267,7 @@
     .services_mainSectionbanner{
         min-height: 60vh !important;
     }
-    /* .channelptnr_imgadvContainer{
-        width: 300px;
-        height: 300px;
-    }
-    .channelptnr_imgadvContainer img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    } */
+   
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1308,15 +1300,7 @@
         gap: 8px;
         font-size: var(--h5-font-size);
     }
-    /* .channelptnr_imgadvContainer{
-        width: 300px;
-        height: 300px;
-    }
-    .channelptnr_imgadvContainer img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    } */
+  
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1359,15 +1343,7 @@
         padding: 6px 30px;
         font-size: 13px;
     }
-    .channelptnr_imgadvContainer{
-        width: 300px;
-        height: 300px;
-    }
-    .channelptnr_imgadvContainer img{
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+   
 }
 
 
