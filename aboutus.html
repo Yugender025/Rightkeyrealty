@@ -159,19 +159,36 @@
                 height: 150px;
             }
         }
-        .founder_company {
-            display: flex;
+        .founders_container {
             max-width: 1400px;
-            margin: 4rem auto;
-            padding: 3rem;
-            gap: 4rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 30px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
+            margin: 0 auto;
+            padding:4rem 2rem 0 2rem;
         }
 
+        .founder_company {
+            display: flex;
+            margin: 4rem auto;
+            padding: 3.5rem;
+            gap: 4rem;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .founder_company:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+        }
+
+        .founder_company:nth-child(even) {
+            flex-direction: row-reverse;
+            margin-bottom: 0 !important;
+            
+        }
+       
         .founder_company::before {
             content: '';
             position: absolute;
@@ -180,6 +197,18 @@
             width: 100%;
             height: 5px;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.8;
+        }
+
+        .founder_company::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 100% 100%, rgba(var(--primary-rgb), 0.03) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .founder_content {
@@ -191,17 +220,47 @@
             z-index: 1;
         }
 
+        .founder_heading {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .founder_heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .founder_description {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            letter-spacing: 0.2px;
+        }
+
         .founder_image_wrapper {
             flex: 1;
             position: relative;
-            padding: 1rem;
+            padding: 1.5rem;
         }
 
         .founder_image {
             position: relative;
             width: 100%;
-            height: 100%;
-            min-height: 500px;
+            height: 500px;
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -218,27 +277,31 @@
             transform: scale(1.03);
         }
 
-        .founder_heading {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            line-height: 1.2;
-            position: relative;
-            padding-bottom: 1rem;
+        .founder_details {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 0.5rem;
         }
 
-        .founder_description {
+        .founder_name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .founder_title {
             font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            color: #666;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .social_container {
             margin-top: 3rem;
             padding-top: 2rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -250,25 +313,30 @@
             gap: 0.8rem;
             padding: 1rem 2rem;
             border-radius: 50px;
-            background: rgba(0, 119, 181, 0.1);
+            background: rgba(0, 119, 181, 0.08);
             color: #0077B5;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 500;
             transition: all 0.3s ease;
-            border: 1px solid rgba(0, 119, 181, 0.2);
+            border: 1px solid rgba(0, 119, 181, 0.15);
         }
 
         .founder_social_link:hover {
-            background: rgba(0, 119, 181, 0.15);
+            background: #0077B5;
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 119, 181, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 119, 181, 0.15);
         }
 
         @media screen and (max-width: 1200px) {
-            .founder_company {
-                margin: 2rem;
+            .founders_container {
                 padding: 2rem;
+            }
+
+            .founder_company {
+                margin: 3rem auto;
+                padding: 2.5rem;
                 gap: 3rem;
             }
 
@@ -278,7 +346,8 @@
         }
 
         @media screen and (max-width: 768px) {
-            .founder_company {
+            .founder_company,
+            .founder_company:nth-child(even) {
                 flex-direction: column-reverse;
                 gap: 2rem;
             }
@@ -293,21 +362,24 @@
                 text-align: center;
             }
 
+            .founder_heading::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
             .founder_image {
-                min-height: 166px;
+                height: 400px;
             }
 
             .social_container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+                justify-content: center;
             }
         }
 
         @media screen and (max-width: 480px) {
             .founder_company {
                 padding: 1.5rem;
-                margin: 1rem;
+                margin: 1.5rem auto;
             }
 
             .founder_heading {
@@ -315,6 +387,22 @@
             }
 
             .founder_description {
+                font-size: 1rem;
+            }
+
+            .founder_image {
+                height: 300px;
+            }
+
+            .founder_details {
+                margin-top: 1rem;
+            }
+            
+            .founder_name {
+                font-size: 1.3rem;
+            }
+            
+            .founder_title {
                 font-size: 1rem;
             }
         }
@@ -339,8 +427,8 @@
                     <li><a href="services.html">Our Services</a></li>
                     <li><a href="channelpartner.html">Channel Partner</a></li>
                     <li><a href="About.html">About us</a></li>
-                    <div class="contact-us" id="contactButtons">
-                        <button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button>
+                    <div class="contact-us">
+                        <a href="contactus.html" target="_blank" rel="noopener noreferrer"><button class="btn" type="button"> <i class="fa-regular fa-phone"></i>Contact us</button></a>
                       </div>
                 </ul>
                
@@ -377,28 +465,64 @@
             </div>
         </div>
     </section>
-    <div class="founder_company">
-        <div class="founder_content">
-            <h1 class="founder_heading">Persistence Always Beats Resistance</h1>
-            <p class="founder_description">
-                Right Key Realty has conducted over 600+ Crores in real estate transactions. This rare success within the Hyderabad brokerage community is founded on several primary principles that are implemented in every transaction with all clients, no matter the price point.
-            </p>
-            <p class="founder_description">
-                The team covers all types of properties, handling sales, rentals, and development of any price point. Right Key Realty has also built partnered relationships with fellow Top 1% brokers both nationwide and globally.
-            </p>
-            <p class="founder_description">
-                We welcome all prospective clients to reach out with any questions or interest in working together. Our company is based in Hyderabad, and it would be our pleasure to help you #MakeYourMove
-            </p>
-            <div class="social_container">
-                <a href="https://www.linkedin.com/in/anudeep-thipparthi/" target="_blank" class="founder_social_link">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span>Connect on LinkedIn</span>
-                </a>
+    <div class="founders_container">
+        <div class="founder_company">
+            <div class="founder_content">
+                <h1 class="founder_heading">Persistence Always Beats Resistance</h1>
+                <p class="founder_description">
+                    Right Key Realty has conducted over 600+ Crores in real estate transactions. This rare success within the Hyderabad brokerage community is founded on several primary principles that are implemented in every transaction with all clients, no matter the price point.
+                </p>
+                <p class="founder_description">
+                    The team covers all types of properties, handling sales, rentals, and development of any price point. Right Key Realty has also built partnered relationships with fellow Top 1% brokers both nationwide and globally.
+                </p>
+                <p class="founder_description">
+                    We welcome all prospective clients to reach out with any questions or interest in working together. Our company is based in Hyderabad, and it would be our pleasure to help you #MakeYourMove
+                </p>
+                <div class="social_container">
+                    <a href="https://www.linkedin.com/in/anudeep-thipparthi/" target="_blank" class="founder_social_link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="founder_image_wrapper">
+                <div class="founder_image">
+                    <img src="assets/images/anudeep.jpg" alt="Anudeep Reddy - Founder">
+                </div>
+                <div class="founder_details">
+                    <h3 class="founder_name">Anudeep Reddy</h3>
+                    <p class="founder_title">Founder</p>
+                </div>
             </div>
         </div>
-        <div class="founder_image_wrapper">
-            <div class="founder_image">
-                <img src="assets/images/anudeep.jpg" alt="Founder Image">
+
+        <div class="founder_company">
+            <div class="founder_content">
+                <h1 class="founder_heading">Building Trust Through Excellence</h1>
+                <p class="founder_description">
+                    As co-founder of Right Key Realty, I bring extensive experience in real estate development and investment strategy to our team. My focus is on ensuring that every client receives personalized attention and expert guidance throughout their real estate journey.
+                </p>
+                <p class="founder_description">
+                    With a deep understanding of the Hyderabad real estate market, I work alongside our team to identify prime opportunities and create value for our clients. Our collaborative approach has helped us build lasting relationships and achieve exceptional results.
+                </p>
+                <p class="founder_description">
+                    Whether you're looking to invest, buy, sell, or rent, our commitment to excellence and professional integrity ensures that your real estate goals are met with the highest standards of service.
+                </p>
+                <div class="social_container">
+                    <a href="https://www.linkedin.com/in/aravind-thipparthi-939595272/" target="_blank" class="founder_social_link">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <div class="founder_image_wrapper">
+                <div class="founder_image">
+                    <img src="assets/images/aravind_hero.jpg" alt="Aravind Reddy - Co-founder">
+                </div>
+                <div class="founder_details">
+                    <h3 class="founder_name">Aravind Reddy</h3>
+                    <p class="founder_title">Co-founder</p>
+                </div>
             </div>
         </div>
     </div>
@@ -579,6 +703,121 @@
         }
     </script>
     <script src="assets/js/navbar.js"></script>
-  
+    <script>
+        class TeamCarousel {
+        constructor() {
+            // DOM Elements
+            this.carousel = document.querySelector('.team_innercarouselContainer');
+            this.prevBtn = document.querySelector('.team_prev_btn');
+            this.nextBtn = document.querySelector('.team_next_btn');
+            this.slides = document.querySelectorAll('.team_memberContainer');
+            
+            // State
+            this.currentIndex = 0;
+            this.slidesPerView = this.getSlidesPerView();
+            this.totalSlides = this.slides.length-1;
+            
+            // Initialize
+            this.init();
+        }
+        
+        init() {
+            // Add event listeners
+            this.prevBtn.addEventListener('click', () => this.navigate('prev'));
+            this.nextBtn.addEventListener('click', () => this.navigate('next'));
+            window.addEventListener('resize', this.handleResize.bind(this));
+            
+            // Initial setup
+            this.updateButtonStates();
+            this.setupTouchEvents();
+        }
+        
+        getSlidesPerView() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 1024) return 2;
+            return 3;
+        }
+        
+        handleResize() {
+            const newSlidesPerView = this.getSlidesPerView();
+            if (newSlidesPerView !== this.slidesPerView) {
+                this.slidesPerView = newSlidesPerView;
+                this.currentIndex = Math.min(this.currentIndex, this.totalSlides - this.slidesPerView);
+                this.updateCarousel();
+                this.updateButtonStates();
+            }
+        }
+        
+        navigate(direction) {
+            if (direction === 'prev' && this.currentIndex > 0) {
+                this.currentIndex--;
+            } else if (direction === 'next' && this.currentIndex < this.totalSlides - this.slidesPerView) {
+                this.currentIndex++;
+            }
+            
+            this.updateCarousel();
+            this.updateButtonStates();
+        }
+        
+        updateCarousel() {
+            const slideWidth = this.slides[0].offsetWidth + 32; // Including gap
+            const offset = -this.currentIndex * slideWidth;
+            this.carousel.style.transform = `translateX(${offset}px)`;
+        }
+        
+        updateButtonStates() {
+            this.prevBtn.disabled = this.currentIndex === 0;
+            this.nextBtn.disabled = this.currentIndex >= this.totalSlides - this.slidesPerView;
+        }
+        
+        setupTouchEvents() {
+            let startX, moveX;
+            const minSwipeDistance = 50;
+            
+            this.carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            this.carousel.addEventListener('touchmove', (e) => {
+                moveX = e.touches[0].clientX;
+            }, { passive: true });
+            
+            this.carousel.addEventListener('touchend', () => {
+                if (!startX || !moveX) return;
+                
+                const difference = startX - moveX;
+                if (Math.abs(difference) > minSwipeDistance) {
+                    if (difference > 0) {
+                        this.navigate('next');
+                    } else {
+                        this.navigate('prev');
+                    }
+                }
+                
+                startX = null;
+                moveX = null;
+            });
+        }
+      }
+      
+      // Initialize the carousel when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        new TeamCarousel();
+      });
+      
+      //scrolling 
+      
+      document.getElementById('scrollbtn').addEventListener('click', function() {
+          const targetElement = document.getElementById('cmpny_success');
+          const headerOffset = 80; // Adjust this value based on your header height
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+          window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
+      });
+      </script>
 </body>
 </html>
