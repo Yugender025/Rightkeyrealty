@@ -29,7 +29,7 @@ function updateSliderPosition() {
   } else if (isTablet) {
     slideWidth = 50; // Show 2 testimonials
   } else {
-    slideWidth = 40; // Show 2.5 testimonials
+    slideWidth = 52; // Show 2.5 testimonials
   }
 
   slider.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
