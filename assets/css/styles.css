@@ -1081,7 +1081,8 @@ nav .hero_section img {
 /* Carousel Container Styles */
 .team_carouselContainer {
     position: relative;
-    
+    overflow: hidden;
+    padding-bottom: 1rem;
 }
 
 .team_innercarouselContainer {
@@ -1147,7 +1148,7 @@ nav .hero_section img {
     justify-content: flex-end;
     gap: 1rem;
     margin-bottom: 2rem;
-    display: none;
+  
 }
 
 .team_prev_btn,
