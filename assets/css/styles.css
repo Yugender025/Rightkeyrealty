@@ -1583,10 +1583,11 @@ footer .designed_privacyCopyright{
 }
 .services_secondInnercontinaer{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding: 8px 60px 60px 60px;
+    padding: 16px 120px 60px 120px;
+
 }
 .services_infoMaincontainer {
     display: flex;
