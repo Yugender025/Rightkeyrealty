@@ -206,7 +206,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
+   
     border-radius: 50%;
    
     z-index: 999999;
@@ -1828,7 +1828,7 @@ rgb(0, 0, 0) 100%
 }
 .channelptnr_provide {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
     gap: 20px; /* Adjust space between items */
 }
 .whychoose_container {
