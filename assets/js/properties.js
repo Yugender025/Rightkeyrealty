@@ -13,9 +13,9 @@ const propertiesList = [
       highlights: "East and west",
     },
     propertyLink: "property1.html",
-    img1: "https://rightkeyrealty.in/images/mayoora-1.jpg",
-    img2: "https://rightkeyrealty.in/images/mayoora-2.jpg",
-    img3: "https://rightkeyrealty.in/images/mayoora-3.jpg",
+    img1: "assets/images/mayoora-1.jpg",
+    img2: "assets/images/mayoora-2.jpg",
+    img3: "assets/images/mayoora-3.jpg",
   },
   {
     _id: 2,
