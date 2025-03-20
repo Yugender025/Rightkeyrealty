@@ -99,24 +99,24 @@ const propertiesList = [
     img2: "assets/images/Asset 2.png",
     img3: "assets/images/Asset 3.png",
   },
-  // {
-  //   _id: 7,
-  //   title: "Jewel park",
-  //   address:
-  //     "Sy.No:117 & 118 of Suchitra & Sy.No:63 of Petbasheerbad village, Near Godavari Home Medchal(Dist)MalkajgiriDist, T.S",
-  //   category: "Residential",
-  //   projectHighlights: {
-  //     amenities:
-  //       "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-  //     squarefeet:
-  //       "GR Mayoora, nestled in the highly sought-after location of Suchitra, stands as a testament to the rapid growth and development",
-  //     highlights: "GR Mayoora, nestled in the highly sought-after",
-  //   },
-  //   propertyLink: "property7.html",
-  //   img1: "assets/images/jewelpark.jpeg",
-  //   img2: "assets/images/jewelpark.jpeg",
-  //   img3: "assets/images/jewelpark.jpeg",
-  // },
+  {
+    _id: 7,
+    title: "Nirvana's Nandanavanam",
+    address: "Bachupally, North Hyderabad, Hyderabad",
+    category: "Residential",
+    projectHighlights: {
+      amenities:
+        "Nirvana's Nandanavanam – C+G+5 floors, 84 premium 2 & 3 BHK units (1185-1770 sq. ft) on 2 acres with 40% open space, gardens & walking trails.",
+      squarefeet:
+        "2 BHK: 1185 - 1425 sq.ft, 3 BHK: 1600 - 1770 sq. ft.Premium Finishes",
+      highlights:
+        "Available in East Facing Units, West Facing Units,North Facing Units",
+    },
+    propertyLink: "property7.html",
+    img1: "assets/images/jewelpark.jpeg",
+    img2: "assets/images/jewelpark.jpeg",
+    img3: "assets/images/jewelpark.jpeg",
+  },
 ];
 
 function createPropertylist(products) {
