@@ -113,9 +113,24 @@ const propertiesList = [
         "Available in East Facing Units, West Facing Units,North Facing Units",
     },
     propertyLink: "property7.html",
-    img1: "assets/images/jewelpark.jpeg",
-    img2: "assets/images/jewelpark.jpeg",
-    img3: "assets/images/jewelpark.jpeg",
+    img1: "assets/images/NIRVANa Building 1.png",
+    img2: "assets/images/NIRVANA floor plans .webp",
+    img3: "assets/images/NIRVANA 3D floor plan 1.png",
+  },
+  {
+    _id: 8,
+    title: "Pushpa",
+    address: "Isnapur, Patancheru",
+    category: "Residential",
+    projectHighlights: {
+      amenities: "2BHK Standalone Apartment in Isnapur, Patancheru",
+      squarefeet: "2 BHK: 1050 SFT",
+      highlights: "North facing",
+    },
+    propertyLink: "property7.html",
+    img1: "assets/images/pushpa-main-img.jpeg",
+    img2: "assets/images/pushpa-pr-2.png",
+    img3: "assets/images/pushpa-pr-1.png",
   },
 ];
 
